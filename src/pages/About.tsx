@@ -9,9 +9,6 @@ const About = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="About" />
-      <Title order={2}>PWC by patricktheodore</Title>
-      <p>Tetsing 124</p>
-      <Button>Go there</Button>
     </MantineProvider>
   );
 };

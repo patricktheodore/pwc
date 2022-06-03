@@ -64,7 +64,7 @@ const useStyles = createStyles((theme) => ({
     transition: "transform .2s",
 
     "&:hover": {
-      transform: "scale(1.1)",
+      transform: "scale(1.05)",
     },
   },
 
@@ -135,12 +135,7 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header
-      height={HEADER_HEIGHT}
-      mb={120}
-      px={"2rem"}
-      className={classes.root}
-    >
+    <Header height={HEADER_HEIGHT} mb={0} px={"2rem"} className={classes.root}>
       <Global
         styles={[
           {
@@ -157,7 +152,6 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
             alt="Purified Window Cleaning Logo"
             src="../../images/Logo1.png"
             layout="fixed"
-            // loading="eager"
             height={60}
           />
         </Link>
