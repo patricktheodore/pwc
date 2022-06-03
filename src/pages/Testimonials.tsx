@@ -4,11 +4,10 @@ import { myTheme } from "../styles/theme";
 import { HeaderResponsive } from "../components/templates/HeaderResponsive";
 
 import { navigationLinks } from "../components/atoms/navigationLinks";
-
-const Home = () => {
+const Testimonials = () => {
   return (
     <MantineProvider theme={myTheme}>
-      <HeaderResponsive links={navigationLinks} activeLink="Home" />
+      <HeaderResponsive links={navigationLinks} activeLink="Testimonials" />
       <Title order={2}>PWC by patricktheodore</Title>
       <p>Tetsing 124</p>
       <Button>Go there</Button>
@@ -16,4 +15,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Testimonials;
