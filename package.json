@@ -7,6 +7,9 @@
   "keywords": [
     "gatsby"
   ],
+  "resolutions": {
+    "source-map": "^0.8.0-beta.0"
+  },
   "scripts": {
     "dev": "gatsby develop",
     "start": "gatsby develop",
@@ -16,6 +19,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "source-map": "^0.8.0-beta.0",
     "@mantine/core": "^4.2.7",
     "@mantine/form": "^4.2.7",
     "@mantine/hooks": "^4.2.7",
@@ -26,7 +30,8 @@
     "gatsby-plugin-sharp": "^4.15.1",
     "gatsby-source-filesystem": "^4.15.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "tabler-icons-react": "^1.48.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.35",
