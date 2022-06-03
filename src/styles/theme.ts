@@ -1,4 +1,4 @@
-import { Tuple, MantineThemeOverride } from "@mantine/core";
+import { Tuple, MantineThemeOverride, Global } from "@mantine/core";
 
 type CustomColors = "brandOrange" | "secondaryColorName";
 
