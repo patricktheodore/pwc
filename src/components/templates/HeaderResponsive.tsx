@@ -60,6 +60,14 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  logoCont: {
+    transition: "transform .2s",
+
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
+  },
+
   link: {
     display: "block",
     lineHeight: 1,
@@ -95,6 +103,13 @@ interface HeaderResponsiveProps {
   links: { link: string; label: string }[];
   activeLink: string;
 }
+
+const scaleY = {
+  in: { opacity: 1, transform: "scaleY(1)" },
+  out: { opacity: 0, transform: "scaleY(0)" },
+  common: { transformOrigin: "top" },
+  transitionProperty: "transform, opacity",
+};
 
 export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
   const [opened, toggleOpened] = useBooleanToggle(false);
@@ -137,13 +152,15 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
       />
       <Container className={classes.header}>
         {/* <MantineLogo /> */}
-        <StaticImage
-          alt="Purified Window Cleaning Logo"
-          src="../../images/Logo1.png"
-          layout="fixed"
-          loading="eager"
-          height={60}
-        />
+        <Link className={classes.logoCont} to="/">
+          <StaticImage
+            alt="Purified Window Cleaning Logo"
+            src="../../images/Logo1.png"
+            layout="fixed"
+            // loading="eager"
+            height={60}
+          />
+        </Link>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
@@ -155,7 +172,12 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
           size="md"
         />
 
-        <Transition transition="pop-top-left" duration={200} mounted={opened}>
+        <Transition
+          transition={scaleY}
+          timingFunction="ease"
+          duration={200}
+          mounted={opened}
+        >
           {(styles) => (
             <Paper className={classes.dropdown} style={styles} shadow="md">
               {items}
