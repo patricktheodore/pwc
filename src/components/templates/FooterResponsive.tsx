@@ -89,6 +89,7 @@ const useStyles = createStyles((theme) => ({
 
   afterFooter: {
     display: "flex",
+    flexDirection: "column-reverse",
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: theme.spacing.xl,
@@ -101,6 +102,10 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  companyInfo: {
+    margin: "1rem 0",
+  },
+
   logoCont: {
     transition: "transform .2s",
 
@@ -111,6 +116,7 @@ const useStyles = createStyles((theme) => ({
 
   socialAction: {
     margin: "1rem 3rem",
+    borderRadius: "50%",
   },
 
   social: {
@@ -148,10 +154,10 @@ export function FooterResponsive({ links }: FooterLinksProps) {
               alt="Purified Window Cleaning Logo"
               src="../../images/LogoBasic.png"
               layout="fixed"
-              height={60}
+              height={80}
             />
           </Link>
-          <Text size="xs" color="dimmed" className={classes.description}>
+          <Text size="sm" color="dimmed" className={classes.description}>
             Reliable Efficient Sustainable
           </Text>
         </div>
@@ -161,8 +167,14 @@ export function FooterResponsive({ links }: FooterLinksProps) {
         </div>
       </Container>
       <Container className={classes.afterFooter}>
-        <Text color="dimmed" size="sm">
-          © 2022 patricktheodore.me All rights reserved.
+        <Text color="dimmed" size="sm" className={classes.companyInfo}>
+          ABN 00000000000
+        </Text>
+        <Text color="dimmed" size="sm" className={classes.companyInfo}>
+          info@purifiedwindowcleaning.com.au
+        </Text>
+        <Text color="dimmed" size="sm" className={classes.companyInfo}>
+          Copyright © 2022 Purified Window Cleaning Solutions
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
@@ -175,6 +187,11 @@ export function FooterResponsive({ links }: FooterLinksProps) {
           <ActionIcon size="lg" className={classes.socialAction}>
             <BrandInstagram size={30} />
           </ActionIcon>
+          <ActionIcon
+            size={"lg"}
+            aria-label="Settings"
+            className={classes.socialAction}
+          ></ActionIcon>
         </Group>
       </Container>
     </footer>
