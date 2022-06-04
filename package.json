@@ -19,7 +19,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "source-map": "^0.8.0-beta.0",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@mantine/core": "^4.2.7",
     "@mantine/form": "^4.2.7",
     "@mantine/hooks": "^4.2.7",
@@ -31,6 +33,7 @@
     "gatsby-source-filesystem": "^4.15.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "source-map": "^0.8.0-beta.0",
     "tabler-icons-react": "^1.48.1"
   },
   "devDependencies": {

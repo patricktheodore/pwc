@@ -8,12 +8,9 @@ import {
   Anchor,
 } from "@mantine/core";
 import { Link } from "gatsby";
-import {
-  BrandTwitter,
-  BrandInstagram,
-  BrandFacebook,
-} from "tabler-icons-react";
 import { StaticImage } from "gatsby-plugin-image";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -28,6 +25,10 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+
+    [theme.fn.smallerThan("sm")]: {
+      marginBottom: "1rem",
+    },
   },
 
   description: {
@@ -59,7 +60,7 @@ const useStyles = createStyles((theme) => ({
 
   link: {
     display: "block",
-    color: theme.colors.dark[1],
+    color: theme.colors.dark[0],
     fontSize: theme.fontSizes.sm,
     paddingTop: 3,
     paddingBottom: 3,
@@ -67,11 +68,13 @@ const useStyles = createStyles((theme) => ({
     fontFamily: "Montserrat, sans-serif",
 
     "&:hover": {
-      textDecoration: "underline",
+      color: theme.colors.brand[5],
+      textDecoration: "none",
     },
 
     [theme.fn.smallerThan("sm")]: {
       textAlign: "center",
+      margin: "1rem 0",
     },
   },
 
@@ -98,7 +101,7 @@ const useStyles = createStyles((theme) => ({
     borderTop: `1px solid ${theme.colors.gray[2]}`,
 
     [theme.fn.smallerThan("sm")]: {
-      flexDirection: "column",
+      flexDirection: "column-reverse",
     },
   },
 
@@ -117,9 +120,17 @@ const useStyles = createStyles((theme) => ({
   socialAction: {
     margin: "1rem 3rem",
     borderRadius: "50%",
+    color: theme.colors.gray[2],
+
+    "&:hover": {
+      color: theme.colors.brand[6],
+      backgroundColor: theme.colors.gray[8],
+    },
   },
 
   social: {
+    margin: "2rem 0",
+
     [theme.fn.smallerThan("sm")]: {
       marginTop: theme.spacing.xs,
     },
@@ -148,7 +159,6 @@ export function FooterResponsive({ links }: FooterLinksProps) {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          {/* <MantineLogo /> */}
           <Link className={classes.logoCont} to="/">
             <StaticImage
               alt="Purified Window Cleaning Logo"
@@ -162,8 +172,7 @@ export function FooterResponsive({ links }: FooterLinksProps) {
           </Text>
         </div>
         <div className={classes.wrapper}>
-          <Text className={classes.title}></Text>
-          {items}
+          <Text className={classes.title}>{items}</Text>
         </div>
       </Container>
       <Container className={classes.afterFooter}>
@@ -178,20 +187,25 @@ export function FooterResponsive({ links }: FooterLinksProps) {
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg" className={classes.socialAction}>
-            <BrandTwitter size={30} />
-          </ActionIcon>
-          <ActionIcon size="lg" className={classes.socialAction}>
-            <BrandFacebook size={30} />
-          </ActionIcon>
-          <ActionIcon size="lg" className={classes.socialAction}>
-            <BrandInstagram size={30} />
-          </ActionIcon>
-          <ActionIcon
-            size={"lg"}
-            aria-label="Settings"
+          <Anchor
+            href="https://facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+            size="lg"
             className={classes.socialAction}
-          ></ActionIcon>
+          >
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
+          </Anchor>
+          <Anchor
+            // component={Anchor}
+            href="https://www.instagram.com"
+            target={"_blank"}
+            aria-label="Instagram"
+            size="lg"
+            className={classes.socialAction}
+          >
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+          </Anchor>
         </Group>
       </Container>
     </footer>
