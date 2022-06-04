@@ -161,6 +161,7 @@ export function FooterResponsive({ links }: FooterLinksProps) {
         <div className={classes.logo}>
           <Link className={classes.logoCont} to="/">
             <StaticImage
+              placeholder="tracedSVG"
               alt="Purified Window Cleaning Logo"
               src="../../images/LogoBasic.png"
               layout="fixed"

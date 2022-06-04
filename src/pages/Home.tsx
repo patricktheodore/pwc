@@ -16,3 +16,6 @@ const Home = () => {
 };
 
 export default Home;
+
+// summary of everything with learn more button to either locations on the site.
+// hero image with parallax scrolling on desktop and full height static on mobile

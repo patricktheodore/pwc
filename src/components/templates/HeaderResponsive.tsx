@@ -149,6 +149,7 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
         {/* <MantineLogo /> */}
         <Link className={classes.logoCont} to="/">
           <StaticImage
+            placeholder="tracedSVG"
             alt="Purified Window Cleaning Logo"
             src="../../images/Logo1.png"
             layout="fixed"
