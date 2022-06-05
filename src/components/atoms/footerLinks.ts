@@ -3,5 +3,6 @@ export const footerLinks = [
   { to: "/Services", label: "Services" },
   { to: "/About", label: "About Us" },
   { to: "/Testimonials", label: "Testimonials" },
-  { to: "/Contect", label: "Contact Us" },
+  { to: "/Contact", label: "Contact Us" },
+  { to: "/Quote", label: "Get a Quote" },
 ];

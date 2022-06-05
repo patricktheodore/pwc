@@ -23,7 +23,7 @@ export const footerStyles = createStyles((theme) => ({
     marginTop: 5,
     fontWeight: 500,
     fontFamily: "Montserrat, sans-serif",
-    color: theme.colors.brand[6],
+    color: theme.colors.brand[5],
 
     [theme.fn.smallerThan("sm")]: {
       marginTop: theme.spacing.xs,
@@ -95,6 +95,7 @@ export const footerStyles = createStyles((theme) => ({
 
   companyInfo: {
     margin: "1rem 0",
+    color: theme.colors.gray[2],
   },
 
   logoCont: {

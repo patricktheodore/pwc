@@ -46,13 +46,13 @@ export function FooterResponsive({ links }: FooterLinksProps) {
         </div>
       </Container>
       <Container className={classes.afterFooter}>
-        <Text color="dimmed" size="sm" className={classes.companyInfo}>
+        <Text size="sm" className={classes.companyInfo}>
           ABN 00000000000
         </Text>
-        <Text color="dimmed" size="sm" className={classes.companyInfo}>
+        <Text size="sm" className={classes.companyInfo}>
           info@purifiedwindowcleaning.com.au
         </Text>
-        <Text color="dimmed" size="sm" className={classes.companyInfo}>
+        <Text size="sm" className={classes.companyInfo}>
           Copyright © 2022 Purified Window Cleaning Solutions
         </Text>
 
@@ -67,7 +67,6 @@ export function FooterResponsive({ links }: FooterLinksProps) {
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </Anchor>
           <Anchor
-            // component={Anchor}
             href="https://www.instagram.com"
             target={"_blank"}
             aria-label="Instagram"

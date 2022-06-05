@@ -72,7 +72,7 @@ export const headerStyles = createStyles((theme) => ({
       textDecoration: "none",
     },
 
-    [theme.fn.smallerThan("md")]: {
+    [theme.fn.smallerThan("lg")]: {
       borderRadius: 0,
       padding: theme.spacing.md,
     },
