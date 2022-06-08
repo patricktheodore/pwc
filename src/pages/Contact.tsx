@@ -15,7 +15,7 @@ const Contact = () => {
       <Grid
         align="flex-start"
         justify="center"
-        sx={{ width: "100%", marginBottom: "4rem" }}
+        sx={{ width: "100%", margin: "0 0 4rem 0" }}
       >
         <Grid.Col sm={12} md={6} lg={5}>
           <EasyContactSheet />

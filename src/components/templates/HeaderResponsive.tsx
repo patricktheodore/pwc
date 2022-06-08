@@ -8,6 +8,7 @@ import {
   Transition,
   Global,
   Anchor,
+  Button,
 } from "@mantine/core";
 import { useBooleanToggle } from "@mantine/hooks";
 import { Link } from "gatsby";
@@ -73,6 +74,9 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
           />
         </Link>
         <Group spacing={5} className={classes.links}>
+          <Anchor>
+            <Button className={classes.quoteButton}>Get A Quote</Button>
+          </Anchor>
           {items}
         </Group>
 

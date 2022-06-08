@@ -4,5 +4,4 @@ export const navigationLinks = [
   { link: "About", label: "About Us" },
   { link: "Testimonials", label: "Testimonials" },
   { link: "Contact", label: "Contact Us" },
-  { link: "Quote", label: "Get a Quote" },
 ];

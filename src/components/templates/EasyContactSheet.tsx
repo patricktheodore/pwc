@@ -15,7 +15,7 @@ const EasyContactSheet = () => {
   return (
     <>
       {/* Get in TOUCH phone email location's serviced */}
-      <Box mx="auto" className={classes.formCont}>
+      <Box className={classes.formCont}>
         <Title order={2} className={classes.formTitle}>
           Get in touch
         </Title>
