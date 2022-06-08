@@ -112,7 +112,7 @@ export const footerStyles = createStyles((theme) => ({
     color: theme.colors.gray[2],
 
     "&:hover": {
-      color: theme.colors.brand[6],
+      color: theme.colors.brand[5],
       backgroundColor: theme.colors.gray[8],
     },
   },
