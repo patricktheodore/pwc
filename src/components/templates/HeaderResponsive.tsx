@@ -60,6 +60,7 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
           },
         ]}
       />
+
       <Container className={classes.header}>
         {/* <MantineLogo /> */}
         <Link className={classes.logoCont} to="/">

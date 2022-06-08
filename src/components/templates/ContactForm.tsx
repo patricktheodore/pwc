@@ -56,7 +56,7 @@ export const ContactForm = () => {
   return (
     <Box mx="auto" className={classes.formCont}>
       <Title className={classes.formTitle} order={2}>
-        Send an enquiry.
+        Send an enquiry
       </Title>
       <form onSubmit={handleSubmit}>
         <TextInput
@@ -75,7 +75,6 @@ export const ContactForm = () => {
           {...form.getInputProps("email")}
           onBlur={() => form.validateField("email")}
         />
-        {/* checkbox or multiple select, or dropdown for email subject role */}
         <NativeSelect
           aria-label="Subject select"
           data={[
