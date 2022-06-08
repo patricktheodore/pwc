@@ -86,12 +86,17 @@ export const headerStyles = createStyles((theme) => ({
     },
   },
 
-  quoteButton: {
+  faIcon: {
+    padding: "0 0 0 1rem",
+  },
+
+  headerButton: {
     borderRadius: theme.radius.xl,
     fontWeight: 500,
     fontFamily: "Montserrat, sans-serif",
     color: theme.colors.dark[8],
     border: `1px solid ${theme.colors.dark[8]}`,
+    margin: "0 1rem",
 
     "&:hover": {
       backgroundColor: theme.colors.brand[4],
