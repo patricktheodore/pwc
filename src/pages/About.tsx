@@ -10,6 +10,8 @@ const About = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="About" />
+      {/* small story about the business. Some images/quotes from Tom etc.
+    Info about the team */}
       <FooterResponsive links={footerLinks} />
     </MantineProvider>
   );

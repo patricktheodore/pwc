@@ -4,7 +4,11 @@ export const contactStyles = createStyles((theme) => ({
   formCont: {
     padding: "0 2rem",
     width: "100%",
-    maxWidth: "500px",
+    // maxWidth: "500px",
+
+    [theme.fn.smallerThan("md")]: {
+      padding: 0,
+    },
   },
 
   submitBtn: {

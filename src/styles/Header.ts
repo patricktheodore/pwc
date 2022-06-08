@@ -19,7 +19,7 @@ export const headerStyles = createStyles((theme) => ({
     borderBottomLeftRadius: theme.radius.md,
     borderBottomRightRadius: theme.radius.md,
     borderTopWidth: 0,
-    overflow: "hidden",
+    overflow: "auto",
     padding: "1rem 0 1rem 1rem",
 
     [theme.fn.largerThan("md")]: {
@@ -32,6 +32,8 @@ export const headerStyles = createStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     height: "100%",
+    margin: 0,
+    maxWidth: "100%",
   },
 
   links: {
@@ -81,6 +83,18 @@ export const headerStyles = createStyles((theme) => ({
   linkActive: {
     "&, &:hover": {
       color: theme.colors.brand[5],
+    },
+  },
+
+  quoteButton: {
+    borderRadius: theme.radius.xl,
+    fontWeight: 500,
+    fontFamily: "Montserrat, sans-serif",
+    color: theme.colors.dark[8],
+    border: `1px solid ${theme.colors.dark[8]}`,
+
+    "&:hover": {
+      backgroundColor: theme.colors.brand[4],
     },
   },
 }));

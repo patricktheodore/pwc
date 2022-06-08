@@ -15,7 +15,7 @@ const EasyContactSheet = () => {
   return (
     <>
       {/* Get in TOUCH phone email location's serviced */}
-      <Box mx="auto" className={classes.formCont}>
+      <Box className={classes.formCont}>
         <Title order={2} className={classes.formTitle}>
           Get in touch
         </Title>
@@ -98,7 +98,7 @@ const EasyContactSheet = () => {
               Location
             </Title>
             <Text className={classes.easyConactDescription} size="md">
-              Example Address, Perth, Western Australia, 6000
+              Hamilton Hill, 6163
             </Text>
           </Group>
           <Group
