@@ -98,7 +98,7 @@ const EasyContactSheet = () => {
               Location
             </Title>
             <Text className={classes.easyConactDescription} size="md">
-              Example Address, Perth, Western Australia, 6000
+              Hamilton Hill, 6163
             </Text>
           </Group>
           <Group

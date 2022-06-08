@@ -31,9 +31,4 @@ const Contact = () => {
 
 export default Contact;
 
-// have a clear call to action in the beginning. With a phone number button and a get an instant quote button
-// have a secondary call to action, a form that allows a user to send an enquiry email
-// form includes, name, email, phone (optional), and a message, and a dropdown/checkbox group (also optional)
-
-// On large screen flex row, on mobile flex col. with number and email having prio
-// contact form as secondary call to action
+// page breaks on mobile fix padding/margins
