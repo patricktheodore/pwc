@@ -14,6 +14,12 @@ import { useBooleanToggle } from "@mantine/hooks";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { headerStyles, HEADER_HEIGHT } from "../../styles/Header";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faDollarSign,
+  faDollar,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface HeaderResponsiveProps {
   links: { link: string; label: string }[];
@@ -74,8 +80,17 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
           />
         </Link>
         <Group spacing={5} className={classes.links}>
-          <Anchor>
-            <Button className={classes.quoteButton}>Get A Quote</Button>
+          <Anchor component={Link} to="/Contact">
+            <Button className={classes.headerButton}>
+              Get A Quote
+              <FontAwesomeIcon className={classes.faIcon} icon={faDollarSign} />
+            </Button>
+          </Anchor>
+          <Anchor href="tel:0400000000">
+            <Button className={classes.headerButton}>
+              Call Us
+              <FontAwesomeIcon className={classes.faIcon} icon={faPhone} />
+            </Button>
           </Anchor>
           {items}
         </Group>
