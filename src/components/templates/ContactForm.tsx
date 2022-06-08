@@ -1,18 +1,31 @@
 import React, { useState } from "react";
 import { z } from "zod";
 import { useForm, zodResolver } from "@mantine/form";
-import { TextInput, Button, Box, Group, Textarea, Title } from "@mantine/core";
+import {
+  TextInput,
+  Button,
+  Box,
+  Group,
+  Textarea,
+  Title,
+  NativeSelect,
+} from "@mantine/core";
+import { ChevronDown } from "tabler-icons-react";
 import { contactStyles } from "../../styles/Contact";
 
 interface FormValues {
   name: string; // regular field, same as inferred type
   email: string; // union, more specific than inferred type (string)
+  subject: string;
   message: string; // values that may be undefined cannot be inferred
 }
 
 const schema = z.object({
   name: z.string().min(2, { message: "A name should have at least 1 letter" }),
   email: z.string().email({ message: "Invalid email address" }),
+  subject: z.string().min(1, {
+    message: "Please select one. If you are unsure, select 'Other'",
+  }),
   message: z
     .string()
     .min(2, { message: "Please provide details (minimum 2 words)" }),
@@ -26,6 +39,7 @@ export const ContactForm = () => {
     initialValues: {
       name: "",
       email: "",
+      subject: "Residential Services",
       message: "",
     },
   });
@@ -62,6 +76,21 @@ export const ContactForm = () => {
           onBlur={() => form.validateField("email")}
         />
         {/* checkbox or multiple select, or dropdown for email subject role */}
+        <NativeSelect
+          aria-label="Subject select"
+          defaultValue="Residential Services"
+          data={[
+            "Residential Services",
+            "Commercial Services",
+            "Solar Panel Cleaning",
+            "Other",
+          ]}
+          mt="sm"
+          label="Subject"
+          {...form.getInputProps("subject")}
+          onBlur={() => form.validateField("subject")}
+          required
+        />
         <Textarea
           required
           label="Message"
@@ -72,10 +101,9 @@ export const ContactForm = () => {
           {...form.getInputProps("message")}
           onBlur={() => form.validateField("message")}
         />
-
         <Group position="center" mt="xl">
           <Button type="submit" className={classes.submitBtn}>
-            Submit
+            Send
           </Button>
         </Group>
       </form>

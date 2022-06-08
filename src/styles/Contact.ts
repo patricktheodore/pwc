@@ -3,6 +3,8 @@ import { createStyles } from "@mantine/core";
 export const contactStyles = createStyles((theme) => ({
   formCont: {
     padding: "0 2rem",
+    width: "100%",
+    maxWidth: "500px",
   },
 
   submitBtn: {
@@ -23,13 +25,25 @@ export const contactStyles = createStyles((theme) => ({
     fontWeight: 200,
     fontSize: "3rem",
     textAlign: "center",
-    margin: "2rem 0",
+    margin: "4rem 0",
   },
 
   faIcon: {
-    borderRadius: "50%",
-    padding: theme.spacing.sm,
-    border: `1px solid ${theme.colors.dark[8]}`,
     color: theme.colors.brand[5],
+    paddingBottom: "4px",
+    margin: "2px 1rem 0 0",
+    width: "2rem",
+  },
+
+  easyContactHeader: {
+    fontWeight: 200,
+    fontSize: "1.5rem",
+    textAlign: "center",
+    marginLeft: "2rem",
+  },
+
+  easyConactDescription: {
+    marginLeft: "5rem",
+    color: theme.colors.gray[7],
   },
 }));

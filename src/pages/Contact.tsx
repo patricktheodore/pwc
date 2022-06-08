@@ -12,12 +12,15 @@ const Contact = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Contact" />
-      {/* aligned to top, and justified center */}
-      <Grid>
-        <Grid.Col sm={12} md={6} lg={4}>
+      <Grid
+        align="flex-start"
+        justify="center"
+        sx={{ width: "100%", marginBottom: "4rem" }}
+      >
+        <Grid.Col sm={12} md={6} lg={5}>
           <EasyContactSheet />
         </Grid.Col>
-        <Grid.Col sm={12} md={6} lg={4}>
+        <Grid.Col sm={12} md={6} lg={5}>
           <ContactForm />
         </Grid.Col>
       </Grid>
