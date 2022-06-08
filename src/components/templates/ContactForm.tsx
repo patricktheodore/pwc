@@ -78,7 +78,6 @@ export const ContactForm = () => {
         {/* checkbox or multiple select, or dropdown for email subject role */}
         <NativeSelect
           aria-label="Subject select"
-          defaultValue="Residential Services"
           data={[
             "Residential Services",
             "Commercial Services",
