@@ -41,7 +41,6 @@ export const ServicesCont = () => {
           margin: "4rem 0",
         }}
       >
-        {" "}
         <CommercialService />
       </Grid.Col>
       <Grid.Col

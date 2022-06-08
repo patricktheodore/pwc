@@ -13,7 +13,7 @@ const CommercialService = () => {
           <StaticImage
             placeholder="tracedSVG"
             alt="House Icon"
-            src="../../images/Commercialicon.png"
+            src="../../images/CommercialIcon.png"
             layout="fixed"
             height={100}
           />
