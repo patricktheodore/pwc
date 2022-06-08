@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Title, MantineProvider, Grid } from "@mantine/core";
+import { MantineProvider, Grid } from "@mantine/core";
 import { myTheme } from "../styles/theme";
 import { HeaderResponsive } from "../components/templates/HeaderResponsive";
 import { FooterResponsive } from "../components/templates/FooterResponsive";

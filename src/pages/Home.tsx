@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Home" />
+      {/* I like the why choose us approach */}
       <FooterResponsive links={footerLinks} />
     </MantineProvider>
   );
