@@ -6,6 +6,10 @@ export const headerStyles = createStyles((theme) => ({
   root: {
     position: "relative",
     zIndex: 1,
+
+    [theme.fn.smallerThan("md")]: {
+      padding: 0,
+    },
   },
 
   dropdown: {
@@ -34,6 +38,10 @@ export const headerStyles = createStyles((theme) => ({
     height: "100%",
     margin: 0,
     maxWidth: "100%",
+
+    [theme.fn.smallerThan("md")]: {
+      padding: "0 1rem",
+    },
   },
 
   links: {
