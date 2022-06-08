@@ -7,7 +7,8 @@ export const contactStyles = createStyles((theme) => ({
     // maxWidth: "500px",
 
     [theme.fn.smallerThan("md")]: {
-      padding: 0,
+      padding: "0",
+      width: "90%",
     },
   },
 
@@ -30,6 +31,10 @@ export const contactStyles = createStyles((theme) => ({
     fontSize: "3rem",
     textAlign: "center",
     margin: "4rem 0",
+
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: "2.5rem",
+    },
   },
 
   faIcon: {
@@ -44,10 +49,18 @@ export const contactStyles = createStyles((theme) => ({
     fontSize: "1.5rem",
     textAlign: "center",
     marginLeft: "2rem",
+
+    [theme.fn.smallerThan("md")]: {
+      marginLeft: "1rem",
+    },
   },
 
   easyConactDescription: {
     marginLeft: "5rem",
     color: theme.colors.gray[7],
+
+    [theme.fn.smallerThan("md")]: {
+      marginLeft: "4rem",
+    },
   },
 }));
