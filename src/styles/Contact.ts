@@ -7,8 +7,8 @@ export const contactStyles = createStyles((theme) => ({
     // maxWidth: "500px",
 
     [theme.fn.smallerThan("md")]: {
-      padding: "0",
-      width: "90%",
+      padding: 0,
+      // width: "90%",
     },
   },
 
@@ -45,13 +45,17 @@ export const contactStyles = createStyles((theme) => ({
   },
 
   easyContactHeader: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     fontWeight: 200,
     fontSize: "1.5rem",
     textAlign: "center",
     marginLeft: "2rem",
 
     [theme.fn.smallerThan("md")]: {
-      marginLeft: "1rem",
+      margin: "1rem 3rem 0.5rem 0",
     },
   },
 
@@ -60,7 +64,28 @@ export const contactStyles = createStyles((theme) => ({
     color: theme.colors.gray[7],
 
     [theme.fn.smallerThan("md")]: {
-      marginLeft: "4rem",
+      margin: 0,
+    },
+  },
+
+  infoStack: {
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+
+    [theme.fn.smallerThan("md")]: {
+      textAlign: "center",
+      alignItems: "center",
+    },
+  },
+
+  easyContactGroup: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "center",
+
+    [theme.fn.smallerThan("md")]: {
+      alignItems: "center",
     },
   },
 }));

@@ -67,7 +67,7 @@ export const headerStyles = createStyles((theme) => ({
   link: {
     display: "block",
     lineHeight: 1,
-    padding: "8px 30px",
+    padding: "8px 20px",
     borderRadius: theme.radius.sm,
     textDecoration: "none",
     color: theme.colors.dark[5],
@@ -84,7 +84,12 @@ export const headerStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("lg")]: {
       borderRadius: 0,
-      padding: theme.spacing.md,
+      padding: theme.spacing.sm,
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      borderRadius: 0,
+      padding: theme.spacing.sm,
     },
   },
 
@@ -104,10 +109,18 @@ export const headerStyles = createStyles((theme) => ({
     fontFamily: "Montserrat, sans-serif",
     color: theme.colors.dark[8],
     border: `1px solid ${theme.colors.dark[8]}`,
-    margin: "0 1rem",
+    margin: "0 20px",
 
     "&:hover": {
       backgroundColor: theme.colors.brand[4],
+    },
+
+    [theme.fn.smallerThan("lg")]: {
+      margin: theme.spacing.sm,
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      display: "none",
     },
   },
 }));
