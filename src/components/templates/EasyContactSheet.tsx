@@ -32,7 +32,7 @@ const EasyContactSheet = () => {
           <Group spacing="xs" className={classes.easyContactGroup}>
             <Title className={classes.easyContactHeader} order={3}>
               <FontAwesomeIcon className={classes.faIcon} icon={faEnvelope} />
-              E-Mail
+              Email
             </Title>
             <Text className={classes.easyConactDescription} size="md">
               info@purifiedwindowcleaning.com.au

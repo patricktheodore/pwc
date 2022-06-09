@@ -62,7 +62,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <Box mx="auto" className={classes.formCont}>
+    <Box className={classes.formCont}>
       <Title className={classes.formTitle} order={2}>
         Send an enquiry
       </Title>

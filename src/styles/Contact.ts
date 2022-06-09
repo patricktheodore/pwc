@@ -2,13 +2,14 @@ import { createStyles } from "@mantine/core";
 
 export const contactStyles = createStyles((theme) => ({
   formCont: {
-    padding: "0 2rem",
-    width: "100%",
-    // maxWidth: "500px",
+    padding: "0 6rem",
 
     [theme.fn.smallerThan("md")]: {
-      padding: 0,
-      // width: "90%",
+      padding: "0 3rem",
+    },
+
+    [theme.fn.smallerThan("sm")]: {
+      padding: "0 1rem",
     },
   },
 
@@ -88,4 +89,6 @@ export const contactStyles = createStyles((theme) => ({
       alignItems: "center",
     },
   },
+
+  contactGrid: {},
 }));
