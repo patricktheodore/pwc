@@ -1,7 +1,11 @@
 import React from "react";
-import { Card, Text, Title } from "@mantine/core";
+import { Card, Text, Title, Anchor, Button } from "@mantine/core";
+import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { servicesStyles } from "../../styles/ServiceStyles";
 import { StaticImage } from "gatsby-plugin-image";
+import { Omega } from "tabler-icons-react";
 
 const SolarPanelService = () => {
   const { classes } = servicesStyles();
@@ -30,6 +34,15 @@ const SolarPanelService = () => {
           remaining essentially unchanged.
         </Text>
       </Card>
+      <Anchor component={Link} to="/Contact">
+        <Button className={classes.cardButton}>
+          Learn More
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className={classes.cardButtonIcon}
+          />
+        </Button>
+      </Anchor>
     </div>
   );
 };

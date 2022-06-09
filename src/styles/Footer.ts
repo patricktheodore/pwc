@@ -94,6 +94,7 @@ export const footerStyles = createStyles((theme) => ({
   },
 
   companyInfo: {
+    textAlign: "center",
     margin: "1rem 0",
     color: theme.colors.gray[2],
   },

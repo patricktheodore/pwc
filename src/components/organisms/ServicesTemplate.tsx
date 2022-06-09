@@ -1,5 +1,8 @@
 import React from "react";
-import { Card, Text, Title } from "@mantine/core";
+import { Card, Text, Title, Anchor, Button } from "@mantine/core";
+import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { servicesStyles } from "../../styles/ServiceStyles";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -29,6 +32,15 @@ const ServicesTemplate = () => {
           five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
         </Text>
+        <Anchor component={Link} to="/Contact">
+          <Button className={classes.cardButton}>
+            Learn More
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className={classes.cardButtonIcon}
+            />
+          </Button>
+        </Anchor>
       </Card>
     </div>
   );

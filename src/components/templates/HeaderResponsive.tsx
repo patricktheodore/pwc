@@ -15,11 +15,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { headerStyles, HEADER_HEIGHT } from "../../styles/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faDollarSign,
-  faDollar,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faDollarSign } from "@fortawesome/free-solid-svg-icons";
 
 interface HeaderResponsiveProps {
   links: { link: string; label: string }[];
