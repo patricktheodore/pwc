@@ -5,12 +5,15 @@ import { HeaderResponsive } from "../components/templates/HeaderResponsive";
 import { navigationLinks } from "../components/atoms/navigationLinks";
 import { FooterResponsive } from "../components/templates/FooterResponsive";
 import { footerLinks } from "../components/atoms/footerLinks";
+import WhyUs from "../components/templates/WhyUs";
 
 const Home = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Home" />
+      {/* hero image with paralax scrolling */}
       {/* I like the why choose us approach */}
+      <WhyUs />
       <FooterResponsive links={footerLinks} />
     </MantineProvider>
   );

@@ -19,26 +19,9 @@ const EasyContactSheet = () => {
         <Title order={2} className={classes.formTitle}>
           Get in touch
         </Title>
-        <Stack align="flex-start" justify="flex-start" spacing="xl">
-          <Group
-            spacing="xs"
-            align="flex-start"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <Title
-              className={classes.easyContactHeader}
-              order={3}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+        <Stack className={classes.infoStack} spacing="xl">
+          <Group className={classes.easyContactGroup} spacing="xs">
+            <Title className={classes.easyContactHeader} order={3}>
               <FontAwesomeIcon className={classes.faIcon} icon={faPhone} />
               Phone
             </Title>
@@ -46,25 +29,8 @@ const EasyContactSheet = () => {
               0469 420 420
             </Text>
           </Group>
-          <Group
-            spacing="xs"
-            align="flex-start"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <Title
-              className={classes.easyContactHeader}
-              order={3}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <Group spacing="xs" className={classes.easyContactGroup}>
+            <Title className={classes.easyContactHeader} order={3}>
               <FontAwesomeIcon className={classes.faIcon} icon={faEnvelope} />
               E-Mail
             </Title>
@@ -72,25 +38,8 @@ const EasyContactSheet = () => {
               info@purifiedwindowcleaning.com.au
             </Text>
           </Group>
-          <Group
-            spacing="xs"
-            align="flex-start"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <Title
-              className={classes.easyContactHeader}
-              order={3}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <Group spacing="xs" className={classes.easyContactGroup}>
+            <Title className={classes.easyContactHeader} order={3}>
               <FontAwesomeIcon
                 className={classes.faIcon}
                 icon={faLocationDot}
@@ -101,25 +50,8 @@ const EasyContactSheet = () => {
               Hamilton Hill, 6163
             </Text>
           </Group>
-          <Group
-            spacing="xs"
-            align="flex-start"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <Title
-              className={classes.easyContactHeader}
-              order={3}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+          <Group spacing="xs" className={classes.easyContactGroup}>
+            <Title className={classes.easyContactHeader} order={3}>
               <FontAwesomeIcon
                 className={classes.faIcon}
                 icon={faCalendarCheck}
