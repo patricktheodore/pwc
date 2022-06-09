@@ -38,6 +38,9 @@ export const homeStyles = createStyles((theme) => ({
     fontSize: "1rem",
     color: theme.colors.brand[5],
     fontWeight: 100,
+    textAlign: "center",
+    padding: "0 0.5rem",
+    marginBottom: "2rem",
   },
 
   whyUsDivider: {
@@ -45,6 +48,48 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   whyUsGrid: {
+    maxWidth: "100%",
+    padding: "0 4rem",
+
+    [theme.fn.smallerThan("xl")]: {
+      padding: "0 2rem",
+      // width: "90%",
+    },
+
+    [theme.fn.smallerThan("sm")]: {
+      padding: 0,
+      // width: "90%",
+    },
+  },
+
+  whyUsGridCol: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    padding: "2rem",
+  },
+
+  whyUsGridColGroup: {
     width: "100%",
+    marginBottom: "2rem",
+  },
+
+  whyUsGridColIcon: {
+    fontSize: "2rem",
+    color: theme.colors.brand[5],
+  },
+
+  whyUsGridColTitle: {
+    fontSize: "1.5rem",
+    color: theme.colors.gray[2],
+    fontWeight: 300,
+  },
+
+  whyUsGridColDescription: {
+    textAlign: "center",
+    fontSize: "1rem",
+    color: theme.colors.gray[2],
+    fontWeight: 200,
   },
 }));

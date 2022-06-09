@@ -1,6 +1,7 @@
 import React from "react";
 import { Title, Divider, Group, Container, Grid } from "@mantine/core";
 import { homeStyles } from "../../styles/HomeStyles";
+import WhyUsCardTemplate from "../organisms/WhyUsCardTemplate";
 
 const WhyUs = () => {
   const { classes } = homeStyles();
@@ -17,7 +18,12 @@ const WhyUs = () => {
         </Title>
       </Group>
       <Grid className={classes.whyUsGrid}>
-        <Title order={4}>Sheeeesh</Title>
+        <WhyUsCardTemplate />
+        <WhyUsCardTemplate />
+        <WhyUsCardTemplate />
+        <WhyUsCardTemplate />
+        <WhyUsCardTemplate />
+        <WhyUsCardTemplate />
       </Grid>
     </Container>
   );
