@@ -4,8 +4,6 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { servicesStyles } from "../../styles/ServiceStyles";
-import { StaticImage } from "gatsby-plugin-image";
-import { Omega } from "tabler-icons-react";
 
 const SolarPanelService = () => {
   const { classes } = servicesStyles();
@@ -14,13 +12,6 @@ const SolarPanelService = () => {
     <div className={classes.serviceCardCont}>
       <Card className={classes.serviceCard}>
         <Card.Section>
-          {/* <StaticImage
-            placeholder="tracedSVG"
-            alt="House Icon"
-            src="../../images/SolarPanelIcon.png"
-            layout="fixed"
-            height={100}
-          /> */}
           <svg
             width="100"
             height="100"

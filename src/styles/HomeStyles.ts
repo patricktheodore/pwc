@@ -67,7 +67,11 @@ export const homeStyles = createStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
-    padding: "2rem",
+    padding: "2rem 4rem",
+
+    [theme.fn.smallerThan("sm")]: {
+      padding: "2rem",
+    },
   },
 
   whyUsGridColGroup: {
@@ -76,7 +80,8 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   whyUsGridColIcon: {
-    fontSize: "2rem",
+    // fontSize: "2rem",
+    fill: theme.colors.brand[5],
     color: theme.colors.brand[5],
   },
 

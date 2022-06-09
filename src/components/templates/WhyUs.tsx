@@ -2,6 +2,7 @@ import React from "react";
 import { Title, Divider, Group, Container, Grid } from "@mantine/core";
 import { homeStyles } from "../../styles/HomeStyles";
 import WhyUsCardTemplate from "../organisms/WhyUsCardTemplate";
+import { WhyUsData } from "../atoms/WhyUsData";
 
 const WhyUs = () => {
   const { classes } = homeStyles();
@@ -18,12 +19,9 @@ const WhyUs = () => {
         </Title>
       </Group>
       <Grid className={classes.whyUsGrid}>
-        <WhyUsCardTemplate />
-        <WhyUsCardTemplate />
-        <WhyUsCardTemplate />
-        <WhyUsCardTemplate />
-        <WhyUsCardTemplate />
-        <WhyUsCardTemplate />
+        {WhyUsData.map((item) => {
+          return <WhyUsCardTemplate item={item} key={item.title} />;
+        })}
       </Grid>
     </Container>
   );

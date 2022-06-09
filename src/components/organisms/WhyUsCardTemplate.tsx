@@ -1,29 +1,45 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Grid, Title, Text, Group } from "@mantine/core";
 import React from "react";
-import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
+import { Grid, Title, Text, Group } from "@mantine/core";
 import { homeStyles } from "../../styles/HomeStyles";
+import FlexibleIcon from "../atoms/FlexibleIcon";
+import TrainingIcon from "../atoms/TrainingIcon";
+import ReliableIcon from "../atoms/ReliableIcon";
+import SustainableIcon from "../atoms/SustainableIcon";
+import EfficientIcon from "../atoms/EfficientIcon";
+import CustomiseIcon from "../atoms/CustomisableIcon";
 
-const WhyUsCardTemplate = () => {
+const renderIcon = (icon: string) => {
+  if (icon === "flexible") {
+    return <FlexibleIcon />;
+  } else if (icon === "trained") {
+    return <TrainingIcon />;
+  } else if (icon === "reliable") {
+    return <ReliableIcon />;
+  } else if (icon === "sustainable") {
+    return <SustainableIcon />;
+  } else if (icon === "efficient") {
+    return <EfficientIcon />;
+  } else if (icon === "customise") {
+    return <CustomiseIcon />;
+  } else {
+    return <FlexibleIcon />;
+  }
+};
+
+const WhyUsCardTemplate = (props: any) => {
   const { classes } = homeStyles();
+
   return (
     <Grid.Col sm={12} md={6} lg={4} className={classes.whyUsGridCol}>
-      {/* horizontal Group space between icon-title */}
       <Group position="center" className={classes.whyUsGridColGroup}>
-        <FontAwesomeIcon
-          icon={faCalendarDays}
-          className={classes.whyUsGridColIcon}
-        />
+        {renderIcon(props.item.icon)}
         <Title order={4} className={classes.whyUsGridColTitle}>
-          Lorem Ipsum simply
+          {props.item.title}
         </Title>
       </Group>
       {/* decsription underneath, text center */}
       <Text className={classes.whyUsGridColDescription}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        {props.item.description}
       </Text>
     </Grid.Col>
   );
