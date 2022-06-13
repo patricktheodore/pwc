@@ -22,7 +22,7 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   goodCompanyCont: {
-    backgroundColor: theme.colors.gray[2],
+    paddingBottom: "2rem",
   },
 
   titleGroup: {
@@ -129,5 +129,9 @@ export const homeStyles = createStyles((theme) => ({
     fontSize: "1rem",
     color: theme.colors.gray[2],
     fontWeight: 200,
+  },
+
+  testimonialImage: {
+    borderRadius: "50%",
   },
 }));

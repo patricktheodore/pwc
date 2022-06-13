@@ -1,22 +1,19 @@
 import React from "react";
-import { Container, Grid, Group, Title } from "@mantine/core";
+import { Container, Group, Title, Text, Grid } from "@mantine/core";
 import { homeStyles } from "../../styles/HomeStyles";
-import { GoodCompanyData } from "../atoms/GoodCompanyData";
-import GoodCompanyTemplate from "../organisms/GoodCompanyTemplate";
+import TestimonialCard from "../organisms/TestimonialCard";
+import { TestimonalData } from "../atoms/TestimonialData";
 
-const GoodCompany: React.FC = () => {
+const TestimonialsShort: React.FC = () => {
   const { classes } = homeStyles();
   return (
-    <Container
-      fluid
-      className={`${classes.homeFluidCont} ${classes.goodCompanyCont}`}
-    >
+    <Container fluid className={classes.homeFluidCont}>
       <Group className={classes.titleGroup}>
         <Title
           order={2}
           className={`${classes.homeTitle} ${classes.goodCompanyTitle}`}
         >
-          You're in good company
+          Testimonials
         </Title>
         {/* <Divider my="lg" size="md" className={classes.homeDivider} /> */}
         <Title order={3} className={`${classes.homeSubtitle}`}>
@@ -25,13 +22,13 @@ const GoodCompany: React.FC = () => {
           since the 1500s, when an unknown printer took a galley of type
         </Title>
       </Group>
-      <Grid className={`${classes.homeGrid} ${classes.companyGrid}`}>
-        {GoodCompanyData.map((company) => {
-          return <GoodCompanyTemplate company={company} key={company.title} />;
+      <Grid>
+        {TestimonalData.map((x) => {
+          return <TestimonialCard item={x} key={x.id} />;
         })}
       </Grid>
     </Container>
   );
 };
 
-export default GoodCompany;
+export default TestimonialsShort;
