@@ -13,13 +13,6 @@ const ResidentialService = () => {
     <div className={classes.serviceCardCont}>
       <Card className={classes.serviceCard}>
         <Card.Section>
-          {/* <StaticImage
-            placeholder="tracedSVG"
-            alt="House Icon"
-            src="../../images/Group6.svg"
-            layout="fixed"
-            height={100}
-          /> */}
           <svg
             width="100"
             height="100"

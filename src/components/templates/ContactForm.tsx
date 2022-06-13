@@ -11,7 +11,6 @@ import {
   Select,
   MultiSelect,
 } from "@mantine/core";
-import { ChevronDown } from "tabler-icons-react";
 import { contactStyles } from "../../styles/Contact";
 
 interface FormValues {
