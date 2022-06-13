@@ -3,7 +3,13 @@ import { createStyles } from "@mantine/core";
 export const servicesStyles = createStyles((theme) => ({
   servicesCont: {
     margin: 0,
-    padding: "4rem",
+    padding: "4rem 10rem",
+    justifyContent: "center",
+    alignItems: "flex-start",
+
+    [theme.fn.smallerThan("lg")]: {
+      padding: "4rem",
+    },
 
     [theme.fn.smallerThan("md")]: {
       padding: 0,
@@ -11,12 +17,12 @@ export const servicesStyles = createStyles((theme) => ({
   },
 
   serviceCardCont: {
-    width: "70%",
+    // width: "70%",
     textAlign: "center",
 
-    [theme.fn.smallerThan("sm")]: {
-      width: "100%",
-    },
+    // [theme.fn.smallerThan("sm")]: {
+    //   width: "100%",
+    // },
   },
 
   serviceCard: {
@@ -54,5 +60,12 @@ export const servicesStyles = createStyles((theme) => ({
 
   cardButtonIcon: {
     margin: "0 0 0 1rem",
+  },
+
+  serviceGridCol: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    padding: "0 2rem",
   },
 }));

@@ -11,92 +11,23 @@ export const ServicesCont = () => {
   const { classes } = servicesStyles();
 
   return (
-    <Grid
-      gutter="xl"
-      justify="center"
-      align="flex-start"
-      className={classes.servicesCont}
-    >
-      <Grid.Col
-        sm={12}
-        md={6}
-        lg={4}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          margin: "4rem 0",
-        }}
-      >
+    <Grid className={classes.servicesCont}>
+      <Grid.Col sm={12} md={6} lg={4} className={classes.serviceGridCol}>
         <ResidentialService />
       </Grid.Col>
-      <Grid.Col
-        sm={12}
-        md={6}
-        lg={4}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          margin: "4rem 0",
-        }}
-      >
+      <Grid.Col sm={12} md={6} lg={4} className={classes.serviceGridCol}>
         <CommercialService />
       </Grid.Col>
-      <Grid.Col
-        sm={12}
-        md={6}
-        lg={4}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          margin: "4rem 0",
-        }}
-      >
-        {" "}
+      <Grid.Col sm={12} md={6} lg={4} className={classes.serviceGridCol}>
         <IndustrialServices />
       </Grid.Col>
-      <Grid.Col
-        sm={12}
-        md={6}
-        lg={4}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          margin: "4rem 0",
-        }}
-      >
-        {" "}
+      <Grid.Col sm={12} md={6} lg={4} className={classes.serviceGridCol}>
         <SolarPanelService />
       </Grid.Col>
-      <Grid.Col
-        sm={12}
-        md={6}
-        lg={4}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          margin: "4rem 0",
-        }}
-      >
-        {" "}
+      <Grid.Col sm={12} md={6} lg={4} className={classes.serviceGridCol}>
         <ServicesTemplate />
       </Grid.Col>
-      <Grid.Col
-        sm={12}
-        md={6}
-        lg={4}
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          margin: "4rem 0",
-        }}
-      >
-        {" "}
+      <Grid.Col sm={12} md={6} lg={4} className={classes.serviceGridCol}>
         <ServicesTemplate />
       </Grid.Col>
     </Grid>

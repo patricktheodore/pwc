@@ -12,8 +12,10 @@ const Home = () => {
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Home" />
       {/* hero image with paralax scrolling */}
-      {/* I like the why choose us approach */}
       <WhyUs />
+      {/* 3 random testimonials from json doc. Testimonials page will do all of them. */}
+      {/* You're in good company section (this is unique to home page) - both of these are outlined in figma doc */}
+      {/* Client stats */}
       <FooterResponsive links={footerLinks} />
     </MantineProvider>
   );
