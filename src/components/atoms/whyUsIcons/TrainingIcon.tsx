@@ -1,5 +1,5 @@
 import React from "react";
-import { homeStyles } from "../../styles/HomeStyles";
+import { homeStyles } from "../../../styles/HomeStyles";
 
 const TrainingIcon = () => {
   const { classes } = homeStyles();

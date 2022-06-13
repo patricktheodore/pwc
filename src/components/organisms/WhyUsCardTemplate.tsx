@@ -1,12 +1,12 @@
 import React from "react";
 import { Grid, Title, Text, Group } from "@mantine/core";
 import { homeStyles } from "../../styles/HomeStyles";
-import FlexibleIcon from "../atoms/FlexibleIcon";
-import TrainingIcon from "../atoms/TrainingIcon";
-import ReliableIcon from "../atoms/ReliableIcon";
-import SustainableIcon from "../atoms/SustainableIcon";
-import EfficientIcon from "../atoms/EfficientIcon";
-import CustomiseIcon from "../atoms/CustomisableIcon";
+import FlexibleIcon from "../atoms/whyUsIcons/FlexibleIcon";
+import TrainingIcon from "../atoms/whyUsIcons/TrainingIcon";
+import ReliableIcon from "../atoms/whyUsIcons/ReliableIcon";
+import SustainableIcon from "../atoms/whyUsIcons/SustainableIcon";
+import EfficientIcon from "../atoms/whyUsIcons/EfficientIcon";
+import CustomiseIcon from "../atoms/whyUsIcons/CustomisableIcon";
 
 const renderIcon = (icon: string) => {
   if (icon === "flexible") {
@@ -26,11 +26,19 @@ const renderIcon = (icon: string) => {
   }
 };
 
-const WhyUsCardTemplate = (props: any) => {
+type TemplateProps = {
+  item: {
+    icon: string;
+    title: string;
+    description: string;
+  };
+};
+
+const WhyUsCardTemplate = (props: TemplateProps) => {
   const { classes } = homeStyles();
 
   return (
-    <Grid.Col sm={12} md={6} lg={4} className={classes.whyUsGridCol}>
+    <Grid.Col sm={12} md={6} lg={4} className={classes.gridCol}>
       <Group position="center" className={classes.whyUsGridColGroup}>
         {renderIcon(props.item.icon)}
         <Title order={4} className={classes.whyUsGridColTitle}>
