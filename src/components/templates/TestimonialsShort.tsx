@@ -13,7 +13,7 @@ const TestimonialsShort: React.FC = () => {
           order={2}
           className={`${classes.homeTitle} ${classes.goodCompanyTitle}`}
         >
-          Testimonials
+          Let our client's speak for us!
         </Title>
         {/* <Divider my="lg" size="md" className={classes.homeDivider} /> */}
         <Title order={3} className={`${classes.homeSubtitle}`}>

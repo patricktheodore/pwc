@@ -13,7 +13,7 @@ export const homeStyles = createStyles((theme) => ({
     },
 
     [theme.fn.smallerThan("md")]: {
-      padding: "4rem 0",
+      padding: "4rem 0.5rem",
     },
   },
 
@@ -133,5 +133,17 @@ export const homeStyles = createStyles((theme) => ({
 
   testimonialImage: {
     borderRadius: "50%",
+  },
+
+  testimonialName: {
+    fontSize: "1.6rem",
+    fontWeight: 100,
+    textAlign: "center",
+  },
+
+  testimonialSubtitle: {
+    fontSize: "1.2rem",
+    fontWeight: 100,
+    textAlign: "center",
   },
 }));

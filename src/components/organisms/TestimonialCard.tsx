@@ -1,4 +1,4 @@
-import { Avatar, Stack, Title, Text, Grid } from "@mantine/core";
+import { Avatar, Stack, Title, Text, Grid, Group } from "@mantine/core";
 import React from "react";
 import { homeStyles } from "../../styles/HomeStyles";
 import Image1 from "../atoms/testimonialImages/Image1";
@@ -11,6 +11,7 @@ type TemplateProps = {
     id: number;
     title: string;
     company?: string;
+    customerInfo: string;
     text: string;
   };
 };
@@ -28,23 +29,40 @@ const getImage = (id: number, name: string) => {
 const TestimonialCard = (props: TemplateProps) => {
   const { classes } = homeStyles();
 
+  // redo
+  // Card contains
+  // Quote at the top that changes color and size based on focus state
+  // Little link icon that changes visibility based on focus state
+  // Image with circle radius that has border that changes based on focus
+  // Name under image, opacity changes based on focus
+  // Title underneath
+
   return (
     <Grid.Col sm={12} md={6} lg={4} className={classes.gridCol}>
-      <Stack align="center">
+      <Group>
         {getImage(props.item.id, props.item.name)}
-        <Title order={3}>{props.item.name}</Title>
-        <Title order={4}>
-          {props.item.company
-            ? `${props.item.title} - ${props.item.company}`
-            : props.item.title}
-        </Title>
-        <Text align="center">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </Text>
-      </Stack>
+        <Stack align="center">
+          <Title order={3} className={classes.testimonialName}>
+            {props.item.name}
+            {/* <span className={classes.testimonialSubtitle}>
+            {props.item.company
+              ? `${props.item.title} - ${props.item.company}`
+              : `${props.item.customerInfo} Customer`}
+            </span> */}
+          </Title>
+          <Title order={4} className={classes.testimonialSubtitle}>
+            {props.item.company
+              ? `${props.item.title} - ${props.item.company}`
+              : `${props.item.customerInfo} Customer`}
+          </Title>
+          <Text align="left" size="sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </Text>
+        </Stack>
+      </Group>
     </Grid.Col>
   );
 };
