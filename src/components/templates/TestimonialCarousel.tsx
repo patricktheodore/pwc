@@ -35,21 +35,23 @@ const TestimonialCarousel = () => {
             color: "gray",
             cursor: "pointer",
             marginTop: "2rem",
+            fontSize: "0.5rem",
+            backgroundColor: "transparent",
+            border: "none",
           };
           const style = isSelected
             ? { ...defStyle, color: "orange" }
             : { ...defStyle };
           return (
-            <span
+            <button
               style={style}
-              className={classes.testimonialIndicator}
               onClick={onClickHandler}
               onKeyDown={onClickHandler}
-              role="button"
-              tabIndex={0}
+              type="button"
+              tabIndex={1}
             >
               <FontAwesomeIcon icon={faCircle} />
-            </span>
+            </button>
           );
         }}
         renderArrowNext={(onClickHandler, hasNext, label) => {

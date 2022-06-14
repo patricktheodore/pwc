@@ -141,14 +141,15 @@ export const homeStyles = createStyles((theme) => ({
     textAlign: "center",
   },
 
-  testimonialIndicator: {
-    borderRadius: "50%",
-    height: "1rem",
-    width: "1rem",
-  },
-
   testimonialCarouselContainer: {
     width: "80%",
+    padding: 0,
+    margin: 0,
+    alignSelf: "center",
+
+    [theme.fn.smallerThan("sm")]: {
+      width: "100%",
+    },
   },
 
   testimonialCarouselCard: {
@@ -157,8 +158,11 @@ export const homeStyles = createStyles((theme) => ({
     justifyContent: "flex-start",
     alignItems: "center",
     margin: "2rem",
-    padding: "4rem",
-    // backgroundColor: theme.colors.gray[1],
+    padding: "4rem 4rem 0 4rem",
+
+    [theme.fn.smallerThan("sm")]: {
+      padding: 0,
+    },
   },
 
   testimonialCarouselFlex: {
@@ -170,6 +174,7 @@ export const homeStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
       textAlign: "center",
+      justifyContent: "space-evenly",
     },
   },
 
@@ -184,6 +189,12 @@ export const homeStyles = createStyles((theme) => ({
   testimonialCarouselText: {
     margin: "2rem",
     padding: "0 2rem",
+    fontStyle: "italic",
+
+    [theme.fn.smallerThan("sm")]: {
+      margin: "2rem",
+      padding: 0,
+    },
   },
 
   testimonialCarouselAvatar: {

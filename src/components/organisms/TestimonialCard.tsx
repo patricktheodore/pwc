@@ -11,7 +11,7 @@ import {
 } from "@mantine/core";
 import React from "react";
 import { homeStyles } from "../../styles/HomeStyles";
-import Stars from "../atoms/stars";
+import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import Image1 from "../atoms/testimonialImages/Image1";
 import Image2 from "../atoms/testimonialImages/Image2";
 import Image3 from "../atoms/testimonialImages/Image3";
@@ -78,9 +78,11 @@ const TestimonialCard = (props: TemplateProps) => {
           </Text>
         </div>
       </div>
-      <Text size="sm" className={classes.testimonialCarouselText}>
-        {props.item.text}
-      </Text>
+      <Group>
+        <Text size="md" className={classes.testimonialCarouselText}>
+          {props.item.text}
+        </Text>
+      </Group>
     </div>
   );
 };
