@@ -10,8 +10,11 @@ import {
   Title,
   Select,
   MultiSelect,
+  Text,
 } from "@mantine/core";
 import { contactStyles } from "../../styles/Contact";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 interface FormValues {
   name: string; // regular field, same as inferred type
@@ -37,6 +40,7 @@ const schema = z.object({
 });
 
 export const ContactForm = () => {
+  const [formState, setFormState] = useState(false);
   const { classes } = contactStyles();
 
   const form = useForm<FormValues>({
@@ -52,12 +56,49 @@ export const ContactForm = () => {
   });
 
   //   insert email package here
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    form.validate();
-    // upon success form submission -
-    // form.reset();
-    // otherwise throw error
+
+    axios({
+      url: "https://formspree.io/f/xayvkapz",
+      method: "post",
+      headers: {
+        Accept: "application/json",
+      },
+      data: {
+        name: form.values.name,
+        address: form.values.address,
+        email: form.values.email,
+        subject: `${form.values.name} - ${form.values.subject}`,
+        services: form.values.services,
+        message: form.values.message,
+      },
+    })
+      .then((response) => {
+        toast.success(
+          `Thanks ${form.values.name.split(
+            " "
+          )}! We've received your enquiry. We will get back to you as soon as possible.`,
+          {
+            style: {
+              fontFamily: "sans-serif",
+            },
+          }
+        );
+      })
+      .catch(function (error) {
+        console.log(error);
+        toast.error(
+          "Oops! Something went wrong, please try again later or call us directly.",
+          {
+            style: {
+              fontFamily: "sans-serif",
+            },
+          }
+        );
+      }),
+      setFormState(true);
+    form.reset();
   };
 
   return (
@@ -67,6 +108,7 @@ export const ContactForm = () => {
       </Title>
       <form onSubmit={handleSubmit}>
         <TextInput
+          disabled={formState}
           required
           label="Name"
           placeholder="Steve Smith"
@@ -75,6 +117,7 @@ export const ContactForm = () => {
           onBlur={() => form.validateField("name")}
         />
         <TextInput
+          disabled={formState}
           required
           label="Email"
           placeholder="example@mail.com"
@@ -83,12 +126,14 @@ export const ContactForm = () => {
           onBlur={() => form.validateField("email")}
         />
         <TextInput
+          disabled={formState}
           label="Address"
           placeholder="12 Placehold Lane, Narnia, 6000"
           mt="sm"
           {...form.getInputProps("address")}
         />
         <Select
+          disabled={formState}
           aria-label="Subject select"
           data={["Residential", "Commercial", "Unsure"]}
           placeholder="Pick one"
@@ -99,6 +144,7 @@ export const ContactForm = () => {
           required
         />
         <MultiSelect
+          disabled={formState}
           aria-label="Services select"
           mt="sm"
           data={[
@@ -118,6 +164,7 @@ export const ContactForm = () => {
           clearable
         />
         <Textarea
+          disabled={formState}
           required
           label="Message"
           placeholder="Tell us how we can help."
@@ -128,10 +175,34 @@ export const ContactForm = () => {
           onBlur={() => form.validateField("message")}
         />
         <Group position="center" mt="xl">
-          <Button type="submit" className={classes.submitBtn}>
+          <Button
+            disabled={formState}
+            type="submit"
+            className={classes.submitBtn}
+          >
             Send
           </Button>
+          <Button
+            disabled={!formState}
+            type="button"
+            onClick={() => setFormState(false)}
+            className={classes.resetBtn}
+          >
+            Reset Form
+          </Button>
         </Group>
+        <Toaster
+          toastOptions={{
+            success: {
+              duration: 5000,
+              position: "bottom-right",
+              ariaProps: {
+                role: "status",
+                "aria-live": "polite",
+              },
+            },
+          }}
+        />
       </form>
     </Box>
   );

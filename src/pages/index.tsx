@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from "react-hot-toast";
 import { Global } from "@mantine/core";
 import Home from "./Home";
 
@@ -15,6 +16,7 @@ const index = () => {
         ]}
       />
       <Home />
+      <Toaster />
     </>
   );
 };
