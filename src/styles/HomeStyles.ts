@@ -5,7 +5,7 @@ export const homeStyles = createStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "flex-start",
+    alignItems: "center",
     padding: "10rem 8rem",
 
     [theme.fn.smallerThan("lg")]: {
@@ -132,11 +132,12 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   testimonialsTitle: {
-    fontSize: "1.5rem",
+    fontSize: "3rem",
+    fontWeight: 100,
   },
 
   testimonialSubtitle: {
-    fontSize: "3rem",
+    fontSize: "1.6rem",
     fontWeight: 100,
     textAlign: "center",
   },
@@ -215,5 +216,22 @@ export const homeStyles = createStyles((theme) => ({
       transform: "scaleY(1.5)",
       color: theme.colors.brand[5],
     },
+  },
+
+  cardButton: {
+    borderRadius: theme.radius.xl,
+    fontWeight: 500,
+    fontFamily: "Montserrat, sans-serif",
+    color: theme.colors.dark[8],
+    border: `1px solid ${theme.colors.dark[8]}`,
+    margin: "1rem 0",
+
+    "&:hover": {
+      backgroundColor: `${theme.colors.orange[3]}`,
+    },
+  },
+
+  cardButtonIcon: {
+    margin: "0 0 0 1rem",
   },
 }));
