@@ -131,6 +131,17 @@ export const homeStyles = createStyles((theme) => ({
     fontWeight: 200,
   },
 
+  testimonialsTitle: {
+    fontSize: "1.5rem",
+  },
+
+  testimonialStack: {
+    border: `1px solid ${theme.colors.brand[5]}`,
+    borderRadius: "1rem",
+    aspectRatio: "1/1",
+    padding: "1rem",
+  },
+
   testimonialImage: {
     borderRadius: "50%",
   },
@@ -142,8 +153,22 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   testimonialSubtitle: {
-    fontSize: "1.2rem",
+    fontSize: "3rem",
     fontWeight: 100,
     textAlign: "center",
+  },
+
+  testimonialPaper: {
+    backgroundColor: theme.colors.brand[5],
+  },
+
+  testimonialText: {
+    margin: "3rem",
+    fontStyle: "italic",
+  },
+
+  starRating: {
+    fill: "red",
+    color: "red",
   },
 }));
