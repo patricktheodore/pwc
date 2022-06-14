@@ -5,11 +5,13 @@ import { HeaderResponsive } from "../components/templates/HeaderResponsive";
 import { FooterResponsive } from "../components/templates/FooterResponsive";
 import { footerLinks } from "../components/atoms/footerLinks";
 import { navigationLinks } from "../components/atoms/navigationLinks";
+import TestimonialCarousel from "../components/templates/TestimonialCarousel";
 
 const Testimonials = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Testimonials" />
+      <TestimonialCarousel />
       <FooterResponsive links={footerLinks} />
     </MantineProvider>
   );

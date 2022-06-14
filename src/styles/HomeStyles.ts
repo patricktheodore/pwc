@@ -135,40 +135,74 @@ export const homeStyles = createStyles((theme) => ({
     fontSize: "1.5rem",
   },
 
-  testimonialStack: {
-    border: `1px solid ${theme.colors.brand[5]}`,
-    borderRadius: "1rem",
-    aspectRatio: "1/1",
-    padding: "1rem",
-  },
-
-  testimonialImage: {
-    borderRadius: "50%",
-  },
-
-  testimonialName: {
-    fontSize: "1.6rem",
-    fontWeight: 100,
-    textAlign: "center",
-  },
-
   testimonialSubtitle: {
     fontSize: "3rem",
     fontWeight: 100,
     textAlign: "center",
   },
 
-  testimonialPaper: {
-    backgroundColor: theme.colors.brand[5],
+  testimonialIndicator: {
+    borderRadius: "50%",
+    height: "1rem",
+    width: "1rem",
   },
 
-  testimonialText: {
-    margin: "3rem",
-    fontStyle: "italic",
+  testimonialCarouselContainer: {
+    width: "80%",
   },
 
-  starRating: {
-    fill: "red",
-    color: "red",
+  testimonialCarouselCard: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    margin: "2rem",
+    padding: "4rem",
+    // backgroundColor: theme.colors.gray[1],
+  },
+
+  testimonialCarouselFlex: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+
+    [theme.fn.smallerThan("sm")]: {
+      flexDirection: "column",
+      textAlign: "center",
+    },
+  },
+
+  testimonialCarouselTextTransform: {
+    textAlign: "left",
+
+    [theme.fn.smallerThan("sm")]: {
+      textAlign: "center",
+    },
+  },
+
+  testimonialCarouselText: {
+    margin: "2rem",
+    padding: "0 2rem",
+  },
+
+  testimonialCarouselAvatar: {
+    margin: "1rem",
+  },
+
+  testimonialCarouselArrows: {
+    color: "gray",
+    cursor: "pointer",
+    border: "none",
+    backgroundColor: "transparent",
+    position: "absolute",
+    top: "50%",
+    zIndex: 1,
+    transition: "all .2s",
+
+    "&:hover": {
+      transform: "scaleY(1.5)",
+      color: theme.colors.brand[5],
+    },
   },
 }));

@@ -34,6 +34,7 @@
     "gatsby-source-filesystem": "^4.15.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-responsive-carousel": "^3.2.23",
     "source-map": "^0.8.0-beta.0",
     "tabler-icons-react": "^1.48.1",
     "zod": "^3.17.3"

@@ -3,6 +3,7 @@ const image1 = require("../../images/icon.png");
 export const TestimonalData = [
   {
     name: "Patrick Sara",
+    avatar: "",
     id: 1,
     title: "CFO",
     company: "patricktheodore",
@@ -11,6 +12,7 @@ export const TestimonalData = [
   },
   {
     name: "Tom Allan",
+    avatar: "",
     id: 2,
     title: "CFO",
     company: "Purified Window Cleaning",
@@ -19,6 +21,7 @@ export const TestimonalData = [
   },
   {
     name: "Steve Viegas",
+    avatar: "",
     id: 3,
     title: "",
     company: "",
