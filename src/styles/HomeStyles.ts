@@ -1,17 +1,28 @@
 import { createStyles } from "@mantine/core";
 
 export const homeStyles = createStyles((theme) => ({
-  whyUsCont: {
+  homeFluidCont: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "flex-start",
-    backgroundColor: theme.colors.gray[8],
-    padding: "4rem",
+    alignItems: "center",
+    padding: "10rem 8rem",
+
+    [theme.fn.smallerThan("lg")]: {
+      padding: "4rem 4rem",
+    },
 
     [theme.fn.smallerThan("md")]: {
-      padding: "4rem 0",
+      padding: "4rem 0.5rem",
     },
+  },
+
+  whyUsCont: {
+    backgroundColor: theme.colors.gray[8],
+  },
+
+  goodCompanyCont: {
+    paddingBottom: "2rem",
   },
 
   titleGroup: {
@@ -22,47 +33,65 @@ export const homeStyles = createStyles((theme) => ({
     width: "100%",
   },
 
-  whyUsTitle: {
+  homeTitle: {
     width: "100%",
     fontWeight: 200,
     fontSize: "3rem",
     textAlign: "center",
-    color: theme.colors.gray[2],
 
     [theme.fn.smallerThan("sm")]: {
       fontSize: "2.5rem",
     },
   },
 
-  whyUsSubtitle: {
-    fontSize: "1rem",
-    color: theme.colors.brand[5],
+  whyUsTitle: {
+    color: theme.colors.gray[2],
+  },
+
+  goodCompanyTitle: {
+    color: theme.colors.gray[8],
+  },
+
+  homeSubtitle: {
+    fontSize: "1.6rem",
     fontWeight: 100,
     textAlign: "center",
     padding: "0 0.5rem",
-    marginBottom: "2rem",
+    margin: "1rem 0 4rem 0",
   },
 
-  whyUsDivider: {
+  whyUsSubtitle: {
+    color: theme.colors.brand[5],
+  },
+
+  homeDivider: {
     width: "50%",
   },
 
-  whyUsGrid: {
+  homeGrid: {
     maxWidth: "100%",
     padding: "0 4rem",
 
     [theme.fn.smallerThan("xl")]: {
       padding: "0 2rem",
-      // width: "90%",
     },
 
     [theme.fn.smallerThan("sm")]: {
       padding: 0,
-      // width: "90%",
     },
   },
 
-  whyUsGridCol: {
+  companyGrid: {
+    alignSelf: "center",
+    width: "66%",
+  },
+
+  companyLogoSvg: {
+    maxHeight: 120,
+    maxWidth: 240,
+  },
+
+  gridCol: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -72,6 +101,10 @@ export const homeStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       padding: "2rem",
     },
+  },
+
+  companyGridCol: {
+    justifyContent: "center",
   },
 
   whyUsGridColGroup: {
@@ -96,5 +129,109 @@ export const homeStyles = createStyles((theme) => ({
     fontSize: "1rem",
     color: theme.colors.gray[2],
     fontWeight: 200,
+  },
+
+  testimonialsTitle: {
+    fontSize: "3rem",
+    fontWeight: 100,
+  },
+
+  testimonialSubtitle: {
+    fontSize: "1.6rem",
+    fontWeight: 100,
+    textAlign: "center",
+  },
+
+  testimonialCarouselContainer: {
+    width: "80%",
+    padding: 0,
+    margin: 0,
+    alignSelf: "center",
+
+    [theme.fn.smallerThan("sm")]: {
+      width: "100%",
+    },
+  },
+
+  testimonialCarouselCard: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    margin: "2rem",
+    padding: "4rem 4rem 0 4rem",
+
+    [theme.fn.smallerThan("sm")]: {
+      padding: 0,
+    },
+  },
+
+  testimonialCarouselFlex: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+
+    [theme.fn.smallerThan("sm")]: {
+      flexDirection: "column",
+      textAlign: "center",
+      justifyContent: "space-evenly",
+    },
+  },
+
+  testimonialCarouselTextTransform: {
+    textAlign: "left",
+
+    [theme.fn.smallerThan("sm")]: {
+      textAlign: "center",
+    },
+  },
+
+  testimonialCarouselText: {
+    margin: "2rem",
+    padding: "0 2rem",
+    fontStyle: "italic",
+
+    [theme.fn.smallerThan("sm")]: {
+      margin: "2rem",
+      padding: 0,
+    },
+  },
+
+  testimonialCarouselAvatar: {
+    margin: "1rem",
+  },
+
+  testimonialCarouselArrows: {
+    color: "gray",
+    cursor: "pointer",
+    border: "none",
+    backgroundColor: "transparent",
+    position: "absolute",
+    top: "50%",
+    zIndex: 1,
+    transition: "all .2s",
+
+    "&:hover": {
+      transform: "scaleY(1.5)",
+      color: theme.colors.brand[5],
+    },
+  },
+
+  cardButton: {
+    borderRadius: theme.radius.xl,
+    fontWeight: 500,
+    fontFamily: "Montserrat, sans-serif",
+    color: theme.colors.dark[8],
+    border: `1px solid ${theme.colors.dark[8]}`,
+    margin: "1rem 0",
+
+    "&:hover": {
+      backgroundColor: `${theme.colors.orange[3]}`,
+    },
+  },
+
+  cardButtonIcon: {
+    margin: "0 0 0 1rem",
   },
 }));
