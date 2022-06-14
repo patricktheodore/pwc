@@ -76,9 +76,9 @@ export const ContactForm = () => {
     })
       .then((response) => {
         toast.success(
-          `Thanks ${form.values.name.split(
-            " "
-          )}! We've received your enquiry. We will get back to you as soon as possible.`,
+          `Thanks ${
+            form.values.name.split(" ")[0]
+          }! We've received your enquiry. We will get back to you as soon as possible.`,
           {
             style: {
               fontFamily: "sans-serif",
@@ -97,8 +97,8 @@ export const ContactForm = () => {
           }
         );
       }),
-      setFormState(true);
-    form.reset();
+      form.reset();
+    setFormState(true);
   };
 
   return (
