@@ -11,6 +11,7 @@ import {
   Select,
   MultiSelect,
   Text,
+  Stack,
 } from "@mantine/core";
 import { contactStyles } from "../../styles/Contact";
 import axios from "axios";
@@ -186,7 +187,7 @@ export const ContactForm = () => {
           {...form.getInputProps("message")}
           onBlur={() => form.validateField("message")}
         />
-        <Group position="center" mt="xl">
+        <Stack className={classes.buttonGroup} mt="xl">
           <Button
             disabled={formState}
             type="submit"
@@ -201,12 +202,12 @@ export const ContactForm = () => {
               onClick={() => setFormState(false)}
               className={classes.resetBtn}
             >
-              Reset Form
+              Send Another
             </Button>
           ) : (
             <></>
           )}
-        </Group>
+        </Stack>
         <Toaster />
       </form>
     </Box>

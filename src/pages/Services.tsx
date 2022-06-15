@@ -6,17 +6,13 @@ import { FooterResponsive } from "../components/templates/FooterResponsive";
 import { footerLinks } from "../components/atoms/footerLinks";
 import { navigationLinks } from "../components/atoms/navigationLinks";
 import { ServicesCont } from "../components/templates/ServicesCont";
-import { servicesStyles } from "../styles/ServiceStyles";
+import { ServicesHero } from "../components/templates/ServicesHero";
 
 const Services = () => {
-  const { classes } = servicesStyles();
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Services" />
-      {/* hero image, have a card for each services provided with a little icon
-      for each service provided */}
-      {/* Start with example card and we can duplicate for each service */}
-      <Title order={1}>Our Services</Title>
+      <ServicesHero />
       <ServicesCont />
       <FooterResponsive links={footerLinks} />
     </MantineProvider>

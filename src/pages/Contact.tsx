@@ -7,11 +7,13 @@ import { footerLinks } from "../components/atoms/footerLinks";
 import { navigationLinks } from "../components/atoms/navigationLinks";
 import { ContactForm } from "../components/templates/ContactForm";
 import EasyContactSheet from "../components/templates/EasyContactSheet";
+import { ContactHero } from "../components/templates/ContactHero";
 
 const Contact = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Contact" />
+      <ContactHero />
       <Grid
         align="flex-start"
         justify="center"

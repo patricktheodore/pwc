@@ -13,10 +13,14 @@ export const contactStyles = createStyles((theme) => ({
     },
   },
 
+  buttonGroup: {
+    display: "flex",
+    alignItems: "center",
+  },
+
   submitBtn: {
-    width: "100%",
-    padding: "5px 0",
-    borderRadius: theme.radius.md,
+    width: "30%",
+    borderRadius: theme.radius.xl,
     fontWeight: 500,
     fontFamily: "Montserrat, sans-serif",
     color: theme.colors.dark[8],
@@ -28,9 +32,8 @@ export const contactStyles = createStyles((theme) => ({
   },
 
   resetBtn: {
-    width: "100%",
-    padding: "5px 0",
-    borderRadius: theme.radius.md,
+    width: "30%",
+    borderRadius: theme.radius.xl,
     fontWeight: 500,
     fontFamily: "Montserrat, sans-serif",
     color: theme.colors.dark[8],
@@ -46,7 +49,7 @@ export const contactStyles = createStyles((theme) => ({
     fontWeight: 200,
     fontSize: "3rem",
     textAlign: "center",
-    margin: "4rem 0",
+    margin: "4rem 0 2rem 0",
 
     [theme.fn.smallerThan("sm")]: {
       fontSize: "2.5rem",
@@ -104,6 +107,4 @@ export const contactStyles = createStyles((theme) => ({
       alignItems: "center",
     },
   },
-
-  contactGrid: {},
 }));

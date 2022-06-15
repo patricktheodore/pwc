@@ -5,7 +5,7 @@ export const HEADER_HEIGHT = 100;
 export const headerStyles = createStyles((theme) => ({
   root: {
     position: "relative",
-    zIndex: 1,
+    zIndex: 10,
 
     [theme.fn.smallerThan("md")]: {
       padding: 0,
@@ -17,7 +17,7 @@ export const headerStyles = createStyles((theme) => ({
     top: HEADER_HEIGHT,
     left: 0,
     right: 0,
-    zIndex: 0,
+    zIndex: 10,
     borderTopRightRadius: 0,
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: theme.radius.md,

@@ -8,15 +8,16 @@ import { footerLinks } from "../components/atoms/footerLinks";
 import WhyUs from "../components/templates/WhyUs";
 import GoodCompany from "../components/templates/GoodCompany";
 import TestimonialsShort from "../components/templates/TestimonialsShort";
+import { HeroImage } from "../components/templates/HeroImage";
+import { WhatWeDo } from "../components/templates/WhatWeDo";
 
 const Home = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Home" />
-      {/* hero image with paralax scrolling */}
+      <HeroImage />
+      <WhatWeDo />
       <WhyUs />
-      {/* 3 random testimonials from json doc. Testimonials page will do all of them. */}
-      {/* You're in good company section (this is unique to home page) - both of these are outlined in figma doc */}
       <TestimonialsShort />
       {/* Client stats */}
       <GoodCompany />
