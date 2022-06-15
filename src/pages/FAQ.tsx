@@ -1,20 +1,20 @@
 import React from "react";
-import { Button, Title, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { myTheme } from "../styles/theme";
 import { HeaderResponsive } from "../components/templates/HeaderResponsive";
 import { FooterResponsive } from "../components/templates/FooterResponsive";
-import { footerLinks } from "../components/atoms/footerLinks";
 import { navigationLinks } from "../components/atoms/navigationLinks";
-import TestimonialCarousel from "../components/templates/TestimonialCarousel";
+import { footerLinks } from "../components/atoms/footerLinks";
 
-const Testimonials = () => {
+const FAQ = () => {
   return (
     <MantineProvider theme={myTheme}>
-      <HeaderResponsive links={navigationLinks} activeLink="Testimonials" />
-      <TestimonialCarousel />
+      <HeaderResponsive links={navigationLinks} activeLink="FAQ" />
+      {/* small story FAQ the business. Some images/quotes from Tom etc.
+    Info FAQ the team */}
       <FooterResponsive links={footerLinks} />
     </MantineProvider>
   );
 };
 
-export default Testimonials;
+export default FAQ;
