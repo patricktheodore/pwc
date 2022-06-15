@@ -234,4 +234,8 @@ export const homeStyles = createStyles((theme) => ({
   cardButtonIcon: {
     margin: "0 0 0 1rem",
   },
+
+  testimonialButton: {
+    fontSize: "1.5rem",
+  },
 }));
