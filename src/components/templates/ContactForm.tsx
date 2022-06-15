@@ -80,6 +80,12 @@ export const ContactForm = () => {
             form.values.name.split(" ")[0]
           }! We've received your enquiry. We will get back to you as soon as possible.`,
           {
+            duration: 5000,
+            position: "bottom-center",
+            ariaProps: {
+              role: "status",
+              "aria-live": "polite",
+            },
             style: {
               fontFamily: "sans-serif",
             },
@@ -91,6 +97,12 @@ export const ContactForm = () => {
         toast.error(
           "Oops! Something went wrong, please try again later or call us directly.",
           {
+            duration: 5000,
+            position: "bottom-center",
+            ariaProps: {
+              role: "status",
+              "aria-live": "polite",
+            },
             style: {
               fontFamily: "sans-serif",
             },
@@ -127,7 +139,7 @@ export const ContactForm = () => {
         />
         <TextInput
           disabled={formState}
-          label="Address"
+          label="Address (Optional)"
           placeholder="12 Placehold Lane, Narnia, 6000"
           mt="sm"
           {...form.getInputProps("address")}
@@ -182,27 +194,20 @@ export const ContactForm = () => {
           >
             Send
           </Button>
-          <Button
-            disabled={!formState}
-            type="button"
-            onClick={() => setFormState(false)}
-            className={classes.resetBtn}
-          >
-            Reset Form
-          </Button>
+          {formState ? (
+            <Button
+              disabled={!formState}
+              type="button"
+              onClick={() => setFormState(false)}
+              className={classes.resetBtn}
+            >
+              Reset Form
+            </Button>
+          ) : (
+            <></>
+          )}
         </Group>
-        <Toaster
-          toastOptions={{
-            success: {
-              duration: 5000,
-              position: "bottom-right",
-              ariaProps: {
-                role: "status",
-                "aria-live": "polite",
-              },
-            },
-          }}
-        />
+        <Toaster />
       </form>
     </Box>
   );
