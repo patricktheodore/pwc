@@ -243,11 +243,16 @@ export const homeStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: "4rem 2rem",
     margin: "4rem 2rem",
+    padding: "10rem 2rem",
 
     [theme.fn.smallerThan("lg")]: {
       flexDirection: "column",
+      padding: "4rem 4rem",
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      padding: "4rem 0.5rem",
     },
   },
 
@@ -279,6 +284,7 @@ export const homeStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("lg")]: {
       marginLeft: 0,
+      marginTop: "4rem",
       width: "100%",
     },
   },
