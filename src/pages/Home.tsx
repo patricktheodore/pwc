@@ -9,12 +9,14 @@ import WhyUs from "../components/templates/WhyUs";
 import GoodCompany from "../components/templates/GoodCompany";
 import TestimonialsShort from "../components/templates/TestimonialsShort";
 import { HeroImage } from "../components/templates/HeroImage";
+import { WhatWeDo } from "../components/templates/WhatWeDo";
 
 const Home = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="Home" />
       <HeroImage />
+      <WhatWeDo />
       <WhyUs />
       <TestimonialsShort />
       {/* Client stats */}

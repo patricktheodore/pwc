@@ -1,5 +1,8 @@
 import React from "react";
-import { Title, Divider, Group, Container, Grid } from "@mantine/core";
+import { Title, Anchor, Button, Group, Container, Grid } from "@mantine/core";
+import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { homeStyles } from "../../styles/HomeStyles";
 import WhyUsCardTemplate from "../organisms/WhyUsCardTemplate";
 import { WhyUsData } from "../atoms/WhyUsData";
@@ -18,7 +21,6 @@ const WhyUs = () => {
         >
           Why choose us?
         </Title>
-        {/* <Divider my="lg" size="md" className={classes.homeDivider} /> */}
         <Title
           order={3}
           className={`${classes.homeSubtitle} ${classes.whyUsSubtitle}`}
@@ -32,6 +34,16 @@ const WhyUs = () => {
           return <WhyUsCardTemplate item={item} key={item.title} />;
         })}
       </Grid>
+
+      <Anchor component={Link} to="/Contact" mt="2rem">
+        <Button size="lg" radius="xl" className={classes.cardButton}>
+          Get in Touch
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className={classes.cardButtonIcon}
+          />
+        </Button>
+      </Anchor>
     </Container>
   );
 };
