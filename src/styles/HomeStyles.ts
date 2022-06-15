@@ -238,4 +238,45 @@ export const homeStyles = createStyles((theme) => ({
   testimonialButton: {
     fontSize: "1.5rem",
   },
+
+  whatWeDoCont: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "4rem 2rem",
+    margin: "4rem 2rem",
+
+    [theme.fn.smallerThan("lg")]: {
+      flexDirection: "column",
+    },
+  },
+
+  whatWeDoTitle: {
+    fontWeight: 200,
+    fontSize: "3rem",
+
+    [theme.fn.smallerThan("lg")]: {
+      fontSize: "2.5rem",
+    },
+  },
+
+  whatWeDoStack: {
+    width: "50%",
+    marginRight: "2rem",
+
+    [theme.fn.smallerThan("lg")]: {
+      marginRight: 0,
+      width: "100%",
+    },
+  },
+
+  whatWeDoGrid: {
+    width: "50%",
+    marginLeft: "2rem",
+
+    [theme.fn.smallerThan("lg")]: {
+      marginLeft: 0,
+      width: "100%",
+    },
+  },
 }));

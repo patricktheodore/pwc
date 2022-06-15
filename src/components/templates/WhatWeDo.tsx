@@ -1,60 +1,47 @@
 import React from "react";
 import {
-  createStyles,
   Title,
   SimpleGrid,
   Text,
   Button,
   ThemeIcon,
-  Grid,
-  Col,
+  Anchor,
+  Container,
+  Stack,
 } from "@mantine/core";
 import { ReceiptOff, Flame, CircleDotted, FileCode } from "tabler-icons-react";
-
-const useStyles = createStyles((theme) => ({
-  wrapper: {
-    padding: `${theme.spacing.xl * 2}px ${theme.spacing.xl}px`,
-  },
-
-  title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 36,
-    fontWeight: 900,
-    lineHeight: 1.1,
-    marginBottom: theme.spacing.md,
-    color: theme.colorScheme === "dark" ? theme.white : theme.black,
-  },
-}));
+import { Link } from "gatsby";
+import { homeStyles } from "../../styles/HomeStyles";
 
 const features = [
   {
     icon: ReceiptOff,
-    title: "Free and open source",
+    title: "Residential Window Cleaning",
     description:
-      "All packages are published under MIT license, you can use Mantine in any project",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     icon: FileCode,
-    title: "TypeScript based",
+    title: "Commercial Window Cleaning",
     description:
-      "Build type safe applications, all components and hooks export types",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     icon: CircleDotted,
-    title: "No annoying focus ring",
+    title: "Industry Window Cleaning",
     description:
-      "With new :focus-visible selector focus ring will appear only when user navigates with keyboard",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     icon: Flame,
-    title: "Flexible",
+    title: "Pool Fence Restoration",
     description:
-      "Customize colors, spacing, shadows, fonts and many other settings with global theme object",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
 ];
 
 export const WhatWeDo = () => {
-  const { classes } = useStyles();
+  const { classes } = homeStyles();
 
   const items = features.map((feature) => (
     <div key={feature.title}>
@@ -76,38 +63,35 @@ export const WhatWeDo = () => {
   ));
 
   return (
-    <div className={classes.wrapper}>
-      <Grid gutter={80}>
-        <Col span={12} md={5}>
-          <Title className={classes.title} order={2}>
-            A fully featured React components library for your next project
-          </Title>
-          <Text color="dimmed">
-            Build fully functional accessible web applications faster than ever
-            – Mantine includes more than 120 customizable components and hooks
-            to cover you in any situation
-          </Text>
-
-          <Button
-            variant="gradient"
-            gradient={{ deg: 133, from: "blue", to: "cyan" }}
-            size="lg"
-            radius="md"
-            mt="xl"
-          >
-            Get started
+    <Container fluid className={classes.whatWeDoCont}>
+      <Stack className={classes.whatWeDoStack}>
+        <Title
+          style={{ textAlign: "left" }}
+          className={classes.homeTitle}
+          order={2}
+        >
+          What We Do...
+        </Title>
+        <Text style={{ textAlign: "left", fontSize: "1rem", margin: "1rem 0" }}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </Text>
+        <Anchor component={Link} to="/Services">
+          <Button size="md" radius="xl" className={classes.cardButton}>
+            Learn More
           </Button>
-        </Col>
-        <Col span={12} md={7}>
-          <SimpleGrid
-            cols={2}
-            spacing={30}
-            breakpoints={[{ maxWidth: "md", cols: 1 }]}
-          >
-            {items}
-          </SimpleGrid>
-        </Col>
-      </Grid>
-    </div>
+        </Anchor>
+      </Stack>
+      <SimpleGrid
+        cols={2}
+        spacing={50}
+        breakpoints={[{ maxWidth: "sm", cols: 1 }]}
+        className={classes.whatWeDoGrid}
+      >
+        {items}
+      </SimpleGrid>
+    </Container>
   );
 };

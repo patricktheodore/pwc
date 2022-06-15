@@ -32,7 +32,12 @@ export const HeroImage = () => {
         <Title className={classes.title}>
           Purified Window Cleaning Solutions
         </Title>
-        <Text className={classes.description} size="xl" mt="xl">
+        <Text
+          className={classes.description}
+          size="xl"
+          mt="xl"
+          style={{ margin: "2rem" }}
+        >
           Reliable, Efficient, Sustainable. We take great care Lorem Ipsum is
           simply dummy text of the printing and typesetting industry.
         </Text>
