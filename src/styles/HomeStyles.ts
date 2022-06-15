@@ -267,6 +267,9 @@ export const homeStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("lg")]: {
       marginRight: 0,
       width: "100%",
+      justifyContent: "center",
+      alignItems: "center",
+      textAlign: "center",
     },
   },
 
@@ -278,5 +281,15 @@ export const homeStyles = createStyles((theme) => ({
       marginLeft: 0,
       width: "100%",
     },
+  },
+
+  whatWeDoGroup: {
+    display: "flex",
+    alignItems: "center",
+    margin: "2rem 0",
+  },
+
+  [theme.fn.smallerThan("xs")]: {
+    justifyContent: "center",
   },
 }));

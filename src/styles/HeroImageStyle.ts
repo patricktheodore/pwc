@@ -79,7 +79,7 @@ export const HeroImageStyles = createStyles((theme) => ({
     },
 
     "&:hover": {
-      backgroundColor: theme.colors.brand[7],
+      backgroundColor: theme.colors.gray[7],
     },
   },
 
