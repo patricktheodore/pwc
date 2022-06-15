@@ -43,12 +43,22 @@ export const HeroImage = () => {
         </Text>
         <Container fluid className={classes.buttonGroup}>
           <Anchor component={Link} to="/Contact" mt="2rem">
-            <Button radius="xl" className={classes.controlButtons}>
+            <Button
+              variant="gradient"
+              gradient={{ deg: 133, from: "orange", to: "yellow" }}
+              radius="xl"
+              className={classes.controlButtons}
+            >
               Get a Quote
             </Button>
           </Anchor>
           <Anchor href="tel:040000000" mt="2rem">
-            <Button radius="xl" className={classes.controlButtons}>
+            <Button
+              variant="gradient"
+              gradient={{ deg: 133, from: "orange", to: "yellow" }}
+              radius="xl"
+              className={classes.controlButtons}
+            >
               Call Us
             </Button>
           </Anchor>

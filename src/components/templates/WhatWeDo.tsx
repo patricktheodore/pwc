@@ -8,6 +8,7 @@ import {
   Anchor,
   Container,
   Stack,
+  Group,
 } from "@mantine/core";
 import { ReceiptOff, Flame, CircleDotted, FileCode } from "tabler-icons-react";
 import { Link } from "gatsby";
@@ -16,19 +17,19 @@ import { homeStyles } from "../../styles/HomeStyles";
 const features = [
   {
     icon: ReceiptOff,
-    title: "Residential Window Cleaning",
+    title: "Residential",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     icon: FileCode,
-    title: "Commercial Window Cleaning",
+    title: "Commercial",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     icon: CircleDotted,
-    title: "Industry Window Cleaning",
+    title: "Industry",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
@@ -45,17 +46,19 @@ export const WhatWeDo = () => {
 
   const items = features.map((feature) => (
     <div key={feature.title}>
-      <ThemeIcon
-        size={44}
-        radius="md"
-        variant="gradient"
-        gradient={{ deg: 133, from: "blue", to: "cyan" }}
-      >
-        <feature.icon size={26} />
-      </ThemeIcon>
-      <Text size="lg" mt="sm" weight={500}>
-        {feature.title}
-      </Text>
+      <Group position="left" className={classes.whatWeDoGroup}>
+        <ThemeIcon
+          size={60}
+          radius="xl"
+          variant="gradient"
+          gradient={{ deg: 133, from: "orange", to: "yellow" }}
+        >
+          <feature.icon size={26} />
+        </ThemeIcon>
+        <Text size="lg" weight={500}>
+          {feature.title}
+        </Text>
+      </Group>
       <Text color="dimmed" size="sm">
         {feature.description}
       </Text>
@@ -79,7 +82,13 @@ export const WhatWeDo = () => {
           scrambled it to make a type specimen book.
         </Text>
         <Anchor component={Link} to="/Services">
-          <Button size="md" radius="xl" className={classes.cardButton}>
+          <Button
+            variant="gradient"
+            gradient={{ deg: 133, from: "orange", to: "yellow" }}
+            size="md"
+            radius="xl"
+            className={classes.cardButton}
+          >
             Learn More
           </Button>
         </Anchor>

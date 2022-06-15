@@ -45,7 +45,6 @@ const WhyUsCardTemplate = (props: TemplateProps) => {
           {props.item.title}
         </Title>
       </Group>
-      {/* decsription underneath, text center */}
       <Text className={classes.whyUsGridColDescription}>
         {props.item.description}
       </Text>
