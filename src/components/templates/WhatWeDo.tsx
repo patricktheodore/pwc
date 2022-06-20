@@ -17,19 +17,19 @@ import { homeStyles } from "../../styles/HomeStyles";
 const features = [
   {
     icon: ReceiptOff,
-    title: "Residential",
+    title: "Window Cleaning",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     icon: FileCode,
-    title: "Commercial",
+    title: "Solar Panel Cleaning",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     icon: CircleDotted,
-    title: "Industry",
+    title: "Gutters",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
@@ -80,10 +80,10 @@ export const WhatWeDo = () => {
           className={classes.whatWeDoText}
           style={{ textAlign: "left", fontSize: "1rem", margin: "1rem 0" }}
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          Services that we provide ... Lorem Ipsum is simply dummy text of the
+          printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took
+          a galley of type and scrambled it to make a type specimen book.
         </Text>
         <Anchor component={Link} to="/Services">
           <Button
