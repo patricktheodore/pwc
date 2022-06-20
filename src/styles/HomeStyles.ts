@@ -244,7 +244,7 @@ export const homeStyles = createStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     margin: "4rem 2rem",
-    padding: "10rem 2rem",
+    padding: "6rem 2rem",
 
     [theme.fn.smallerThan("lg")]: {
       flexDirection: "column",
@@ -297,5 +297,14 @@ export const homeStyles = createStyles((theme) => ({
 
   [theme.fn.smallerThan("xs")]: {
     justifyContent: "center",
+  },
+
+  whatWeDoText: {
+    textAlign: "left",
+    color: theme.colors.gray[7],
+
+    [theme.fn.smallerThan("xs")]: {
+      textAlign: "center",
+    },
   },
 }));

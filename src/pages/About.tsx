@@ -5,11 +5,13 @@ import { HeaderResponsive } from "../components/templates/HeaderResponsive";
 import { FooterResponsive } from "../components/templates/FooterResponsive";
 import { navigationLinks } from "../components/atoms/navigationLinks";
 import { footerLinks } from "../components/atoms/footerLinks";
+import { AboutUsHero } from "../components/templates/AboutUsHero";
 
 const About = () => {
   return (
     <MantineProvider theme={myTheme}>
       <HeaderResponsive links={navigationLinks} activeLink="About" />
+      <AboutUsHero />
       {/* small story about the business. Some images/quotes from Tom etc.
     Info about the team */}
       <FooterResponsive links={footerLinks} />
