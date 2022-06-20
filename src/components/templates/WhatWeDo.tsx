@@ -87,9 +87,9 @@ export const WhatWeDo = () => {
         </Text>
         <Anchor component={Link} to="/Services">
           <Button
-            variant="gradient"
-            gradient={{ deg: 133, from: "orange", to: "yellow" }}
-            size="md"
+            // variant="gradient"
+            // gradient={{ deg: 133, from: "orange", to: "yellow" }}
+            size="sm"
             radius="xl"
             className={classes.cardButton}
           >

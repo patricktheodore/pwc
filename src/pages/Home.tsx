@@ -10,6 +10,8 @@ import GoodCompany from "../components/templates/GoodCompany";
 import TestimonialsShort from "../components/templates/TestimonialsShort";
 import { HeroImage } from "../components/templates/HeroImage";
 import { WhatWeDo } from "../components/templates/WhatWeDo";
+import { ClientStats } from "../components/templates/ClientStats";
+import { StatsData } from "../components/atoms/StatsData";
 
 const Home = () => {
   return (
@@ -19,7 +21,7 @@ const Home = () => {
       <WhatWeDo />
       <WhyUs />
       <TestimonialsShort />
-      {/* Client stats */}
+      <ClientStats data={StatsData} />
       <GoodCompany />
       <FooterResponsive links={footerLinks} />
     </MantineProvider>

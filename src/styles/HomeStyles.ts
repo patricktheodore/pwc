@@ -244,7 +244,7 @@ export const homeStyles = createStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     margin: "4rem 2rem",
-    padding: "10rem 2rem",
+    padding: "6rem 2rem",
 
     [theme.fn.smallerThan("lg")]: {
       flexDirection: "column",

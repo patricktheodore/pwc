@@ -36,7 +36,7 @@ const WhyUs = () => {
       </Grid>
 
       <Anchor component={Link} to="/Contact" mt="2rem">
-        <Button size="lg" radius="xl" className={classes.cardButton}>
+        <Button size="sm" radius="xl" className={classes.cardButton}>
           Get in Touch
           <FontAwesomeIcon
             icon={faChevronRight}

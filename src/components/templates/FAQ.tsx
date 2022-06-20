@@ -5,15 +5,20 @@ const useStyles = createStyles((theme, _params, getRef) => {
   const control = getRef("control");
 
   return {
-    wrapper: {
-      paddingTop: theme.spacing.xl * 2,
-      paddingBottom: theme.spacing.xl * 2,
-      minHeight: 650,
+    faqCont: {
+      padding: "6rem 0",
     },
 
     title: {
-      fontWeight: 400,
-      marginBottom: theme.spacing.xl * 1.5,
+      width: "100%",
+      fontWeight: 200,
+      fontSize: "3rem",
+      textAlign: "center",
+      marginBottom: "4rem",
+
+      [theme.fn.smallerThan("sm")]: {
+        fontSize: "2rem",
+      },
     },
 
     control: {
@@ -47,12 +52,15 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const placeholder =
-  "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.";
-
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
 export function FaqSimple() {
   const { classes } = useStyles();
   return (
-    <Container size="sm" className={classes.wrapper}>
+    <Container size="sm" className={classes.faqCont}>
+      <Title className={classes.title} order={2}>
+        Find answers to the questions we get asked the most.
+      </Title>
+
       <Accordion
         iconPosition="right"
         classNames={{
