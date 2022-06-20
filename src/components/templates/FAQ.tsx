@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Title, Accordion, createStyles } from "@mantine/core";
+import { Link } from "gatsby";
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const control = getRef("control");
 
   return {
     faqCont: {
-      padding: "6rem 0",
+      padding: "6rem 1rem",
     },
 
     title: {
@@ -33,11 +34,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
       borderRadius: theme.radius.md,
       marginBottom: theme.spacing.lg,
 
-      border: `1px solid ${
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[3]
-          : theme.colors.gray[3]
-      }`,
+      border: `1px solid ${theme.colors.gray[8]}`,
     },
 
     itemOpened: {
@@ -47,6 +44,12 @@ const useStyles = createStyles((theme, _params, getRef) => {
             theme.colorScheme === "dark" ? 4 : 6
           ],
       },
+    },
+
+    moreInfo: {
+      textAlign: "center",
+      fontSize: "0.9rem",
+      marginTop: "2rem",
     },
   };
 });
@@ -85,6 +88,10 @@ export function FaqSimple() {
           {placeholder}
         </Accordion.Item>
       </Accordion>
+
+      <Title order={3} className={classes.moreInfo}>
+        <Link to="/Contact">Can't find what you're looking for?</Link>
+      </Title>
     </Container>
   );
 }

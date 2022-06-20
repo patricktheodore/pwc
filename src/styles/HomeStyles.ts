@@ -244,9 +244,9 @@ export const homeStyles = createStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     margin: "4rem 2rem",
-    padding: "6rem 2rem",
+    padding: "6rem 8rem",
 
-    [theme.fn.smallerThan("lg")]: {
+    [theme.fn.smallerThan("xl")]: {
       flexDirection: "column",
       padding: "4rem 4rem",
     },
@@ -259,17 +259,19 @@ export const homeStyles = createStyles((theme) => ({
   whatWeDoTitle: {
     fontWeight: 200,
     fontSize: "3rem",
+    textAlign: "left",
 
-    [theme.fn.smallerThan("lg")]: {
+    [theme.fn.smallerThan("xl")]: {
       fontSize: "2.5rem",
+      textAlign: "center",
     },
   },
 
   whatWeDoStack: {
-    width: "50%",
+    width: "30%",
     marginRight: "2rem",
 
-    [theme.fn.smallerThan("lg")]: {
+    [theme.fn.smallerThan("xl")]: {
       marginRight: 0,
       width: "100%",
       justifyContent: "center",
@@ -279,7 +281,7 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   whatWeDoGrid: {
-    width: "50%",
+    width: "66%",
     marginLeft: "2rem",
 
     [theme.fn.smallerThan("lg")]: {
@@ -291,20 +293,119 @@ export const homeStyles = createStyles((theme) => ({
 
   whatWeDoGroup: {
     display: "flex",
+    justifyContent: "flex-start",
     alignItems: "center",
     margin: "2rem 0",
-  },
 
-  [theme.fn.smallerThan("xs")]: {
-    justifyContent: "center",
+    [theme.fn.smallerThan("md")]: {
+      justifyContent: "center",
+    },
   },
 
   whatWeDoText: {
     textAlign: "left",
     color: theme.colors.gray[7],
+    fontSize: "1rem",
+    margin: "1rem 4rem 1rem 0",
 
-    [theme.fn.smallerThan("xs")]: {
+    [theme.fn.smallerThan("xl")]: {
       textAlign: "center",
+      margin: 0,
     },
+  },
+
+  whatWeDoDescription: {
+    textAlign: "left",
+    color: theme.colors.gray[7],
+    fontSize: "1rem",
+    margin: "1rem",
+
+    [theme.fn.smallerThan("sm")]: {
+      textAlign: "center",
+      padding: 0,
+    },
+  },
+
+  themeIcon: {
+    border: `1px solid ${theme.colors.gray[7]}`,
+  },
+
+  servicesCont: {
+    justifySelf: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    padding: "2rem 8rem",
+
+    [theme.fn.smallerThan("xl")]: {
+      padding: "4rem 4rem",
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      padding: "4rem 0.5rem",
+      margin: "2rem",
+    },
+  },
+
+  servicesTitle: {
+    fontWeight: 200,
+    fontSize: "3rem",
+    textAlign: "center",
+    marginTop: "4rem",
+
+    [theme.fn.smallerThan("xl")]: {
+      fontSize: "2.5rem",
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      fontSize: "2.rem",
+    },
+  },
+
+  servicesText: {
+    textAlign: "center",
+    color: theme.colors.gray[7],
+    fontSize: "1rem",
+    margin: "1rem 0 6rem 0",
+  },
+
+  servicesGroup: {
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    padding: "0 2rem",
+
+    [theme.fn.smallerThan("md")]: {
+      justifyContent: "center",
+      padding: 0,
+    },
+  },
+
+  servicesDescription: {
+    textAlign: "left",
+    color: theme.colors.gray[7],
+    fontSize: "1rem",
+    marginTop: 20,
+
+    [theme.fn.smallerThan("sm")]: {
+      textAlign: "center",
+      padding: 0,
+    },
+  },
+
+  serviceTitle: {
+    fontWeight: 200,
+    fontSize: "1.2rem",
+    textAlign: "center",
+
+    [theme.fn.smallerThan("lg")]: {
+      fontSize: "1rem",
+      fontWeight: 400,
+    },
+  },
+
+  servicesGrid: {
+    marginBottom: "4rem",
   },
 }));
