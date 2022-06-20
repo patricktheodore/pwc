@@ -55,11 +55,11 @@ export const WhatWeDo = () => {
         >
           <feature.icon size={26} />
         </ThemeIcon>
-        <Text size="lg" weight={500}>
+        <Text size="lg" weight={200}>
           {feature.title}
         </Text>
       </Group>
-      <Text color="dimmed" size="sm">
+      <Text className={classes.whatWeDoText} size="sm">
         {feature.description}
       </Text>
     </div>
@@ -75,7 +75,11 @@ export const WhatWeDo = () => {
         >
           What We Do...
         </Title>
-        <Text style={{ textAlign: "left", fontSize: "1rem", margin: "1rem 0" }}>
+        {/* change text align, responsce start left , flexs to center */}
+        <Text
+          className={classes.whatWeDoText}
+          style={{ textAlign: "left", fontSize: "1rem", margin: "1rem 0" }}
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

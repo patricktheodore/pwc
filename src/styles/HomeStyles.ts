@@ -298,4 +298,13 @@ export const homeStyles = createStyles((theme) => ({
   [theme.fn.smallerThan("xs")]: {
     justifyContent: "center",
   },
+
+  whatWeDoText: {
+    textAlign: "left",
+    color: theme.colors.gray[7],
+
+    [theme.fn.smallerThan("xs")]: {
+      textAlign: "center",
+    },
+  },
 }));
