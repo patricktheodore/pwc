@@ -9,7 +9,7 @@ import TestimonialCarousel from "./TestimonialCarousel";
 const TestimonialsShort: React.FC = () => {
   const { classes } = homeStyles();
   return (
-    <Container fluid className={classes.homeFluidCont}>
+    <Container fluid className={classes.homeFluidCont} id="Testimonials">
       <Group className={classes.titleGroup}>
         <Title
           order={2}
