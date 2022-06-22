@@ -109,6 +109,9 @@ export const ServicesCont = () => {
       >
         {serviceItems}
       </SimpleGrid>
+      <Title order={3} className={classes.serviceSubtitle}>
+        Competitive Pricing Available
+      </Title>
       <Anchor component={Link} to="/Contact" mt="2rem">
         <Button size="sm" radius="xl" className={classes.cardButton}>
           Get a Quote

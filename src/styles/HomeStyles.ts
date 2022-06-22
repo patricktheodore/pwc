@@ -405,7 +405,59 @@ export const homeStyles = createStyles((theme) => ({
     },
   },
 
+  serviceSubtitle: {
+    marginTop: "2rem",
+    fontWeight: 200,
+    fontSize: "1.5rem",
+    textAlign: "center",
+  },
+
   servicesGrid: {
     marginBottom: "4rem",
   },
+
+  aboutCont: {
+    justifySelf: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    maxWidth: '50%',
+
+    // [theme.fn.smallerThan("xl")]: {
+    //   padding: "4rem 4rem",
+    // },
+
+    [theme.fn.smallerThan("md")]: {
+      maxWidth: "100%",
+      padding: "4rem 6rem",
+    },
+
+    [theme.fn.smallerThan("sm")]: {
+      maxWidth: "100%",
+      padding: "4rem 2rem",
+    },
+  },
+
+  aboutTitle: {
+    fontWeight: 200,
+    fontSize: "3rem",
+    textAlign: "center",
+    marginTop: "4rem",
+
+    [theme.fn.smallerThan("xl")]: {
+      fontSize: "2.5rem",
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      fontSize: "2.rem",
+    },
+  },
+
+  aboutText: {
+    textAlign: "justify",
+    color: theme.colors.gray[7],
+    fontSize: "1rem",
+    margin: "1rem 0 6rem 0",
+  }
 }));
