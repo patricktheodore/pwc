@@ -55,7 +55,7 @@ export const WhatWeDo = () => {
           size={60}
           radius="xl"
           variant="gradient"
-          gradient={{ deg: 133, from: "orange", to: "yellow" }}
+          gradient={{ deg: 133, from: "#FF5714", to: "#FFB800" }}
           className={classes.themeIcon}
         >
           <feature.icon size={26} />

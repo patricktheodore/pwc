@@ -76,7 +76,7 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
           />
         </Link>
         <Group spacing={5} className={classes.links}>
-          <Anchor component={Link} to="/Contact">
+          {/* <Anchor component={Link} to="/Contact">
             <Button className={classes.headerButton}>
               Get A Quote
               <FontAwesomeIcon className={classes.faIcon} icon={faDollarSign} />
@@ -87,7 +87,7 @@ export function HeaderResponsive({ links, activeLink }: HeaderResponsiveProps) {
               Call Us
               <FontAwesomeIcon className={classes.faIcon} icon={faPhone} />
             </Button>
-          </Anchor>
+          </Anchor> */}
           {items}
         </Group>
 

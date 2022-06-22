@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Container, Group, Anchor } from "@mantine/core";
+import { Text, Container, Group, Anchor, SimpleGrid } from "@mantine/core";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -41,9 +41,14 @@ export function FooterResponsive({ links }: FooterLinksProps) {
             Reliable Efficient Sustainable
           </Text>
         </div>
-        <div className={classes.wrapper}>
-          <Text className={classes.title}>{items}</Text>
-        </div>
+          <SimpleGrid
+            cols={2}
+            spacing={5}
+            breakpoints={[{ maxWidth: "sm", cols: 1, spacing: 0 }]}
+            className={classes.footerSimpleGrid}
+          >
+            {items}
+          </SimpleGrid>
       </Container>
       <Container className={classes.afterFooter}>
         <Text size="sm" className={classes.companyInfo}>
