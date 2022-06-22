@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, Title, Text, Grid, Stack, SimpleGrid } from "@mantine/core";
+import {
+  Container,
+  Title,
+  Text,
+  Grid,
+  Stack,
+  SimpleGrid,
+  Group,
+} from "@mantine/core";
 import { homeStyles } from "../../styles/HomeStyles";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -24,60 +32,75 @@ const AboutUsCont = () => {
       </Text>
       <Grid>
         {/* Heights needs to match until breakpoint */}
-        <Grid.Col sm={12} lg={6}>
-          <Title order={3}>Placeholder</Title>
-          <Title order={4}>Dummy subtitle</Title>
-          <Text>
+        <Grid.Col
+          md={6}
+          sm={12}
+          sx={{ alignItems: "end" }}
+          className={classes.aboutGridTextCont}
+        >
+          <Title order={3} className={classes.aboutGridTitle}>
+            Placeholder
+          </Title>
+          <Title order={4} className={classes.aboutGridSubtext}>
+            Dummy subtitle
+          </Title>
+          <Text align="right" size="sm" className={classes.aboutGridText}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s
           </Text>
         </Grid.Col>
-        <Grid.Col sm={12} lg={6}>
+        <Grid.Col md={6} sm={12}>
           <StaticImage
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             alt=""
           />
         </Grid.Col>
-        <Grid.Col sm={12} lg={6}>
+        <Grid.Col sm={12} md={6}>
           <StaticImage
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             alt=""
           />
         </Grid.Col>
-        <Grid.Col sm={12} lg={6}>
-          <Title order={3}>Placeholder</Title>
-          <Title order={4}>Dummy subtitle</Title>
-          <Text>
+        <Grid.Col sm={12} md={6} className={classes.aboutGridTextCont}>
+          <Title order={3} className={classes.aboutGridTitle}>
+            OUR TEAM
+          </Title>
+          {/* brand colored border */}
+          <Title order={4} className={classes.aboutGridSubtext}>
+            Dummy subtitle
+          </Title>
+          <Text size="sm" className={classes.aboutGridText}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s
           </Text>
         </Grid.Col>
-        <Grid.Col sm={12} lg={6}>
-          <Title order={3}>Placeholder</Title>
-          <Title order={4}>Dummy subtitle</Title>
-          <Text>
+        <Grid.Col
+          sm={12}
+          md={6}
+          sx={{ alignItems: "end" }}
+          className={classes.aboutGridTextCont}
+        >
+          <Title order={3} className={classes.aboutGridTitle}>
+            Placeholder
+          </Title>
+          <Title order={4} className={classes.aboutGridSubtext}>
+            Dummy subtitle
+          </Title>
+          <Text align="right" size="sm" className={classes.aboutGridText}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s
           </Text>
         </Grid.Col>
-        <Grid.Col sm={12} lg={6}>
+        <Grid.Col sm={12} md={6}>
           <StaticImage
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
             alt=""
           />
         </Grid.Col>
       </Grid>
-      {/* 
-        
-        image float left - paragraph
-        paragraph - image float right
-        repeat process as many times as neccessary
-
-        resources/services title order={3}
-        */}
     </Container>
   );
 };

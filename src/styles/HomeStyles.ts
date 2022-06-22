@@ -422,13 +422,13 @@ export const homeStyles = createStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    maxWidth: '50%',
+    maxWidth: "66%",
 
     // [theme.fn.smallerThan("xl")]: {
     //   padding: "4rem 4rem",
     // },
 
-    [theme.fn.smallerThan("md")]: {
+    [theme.fn.smallerThan("lg")]: {
       maxWidth: "100%",
       padding: "4rem 6rem",
     },
@@ -450,7 +450,7 @@ export const homeStyles = createStyles((theme) => ({
     },
 
     [theme.fn.smallerThan("md")]: {
-      fontSize: "2.rem",
+      fontSize: "2rem",
     },
   },
 
@@ -459,5 +459,36 @@ export const homeStyles = createStyles((theme) => ({
     color: theme.colors.gray[7],
     fontSize: "1rem",
     margin: "1rem 0 6rem 0",
-  }
+  },
+
+  aboutGridTextCont: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+
+    [theme.fn.smallerThan("md")]: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+
+  aboutGridTitle: {
+    fontSize: "1.5rem",
+    color: theme.colors.gray[7],
+    fontWeight: 200,
+  },
+
+  aboutGridSubtext: {
+    fontSize: "1.2rem",
+    fontWeight: 600,
+  },
+
+  aboutGridText: {
+    color: theme.colors.gray[7],
+
+    [theme.fn.smallerThan("md")]: {
+      textAlign: "center",
+    },
+  },
 }));
