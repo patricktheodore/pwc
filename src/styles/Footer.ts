@@ -50,8 +50,6 @@ export const footerStyles = createStyles((theme) => ({
     display: "block",
     color: theme.colors.dark[0],
     fontSize: theme.fontSizes.sm,
-    paddingTop: 3,
-    paddingBottom: 3,
     fontWeight: 500,
     fontFamily: "Montserrat, sans-serif",
 
@@ -62,7 +60,7 @@ export const footerStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("sm")]: {
       textAlign: "center",
-      margin: "1rem 0",
+      marginTop: '5px'
     },
   },
 
@@ -125,4 +123,9 @@ export const footerStyles = createStyles((theme) => ({
       marginTop: theme.spacing.xs,
     },
   },
+
+  footerSimpleGrid: {
+    width: '300px',
+    margin: '1rem 0'
+  }
 }));

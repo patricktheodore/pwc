@@ -1,6 +1,6 @@
 import { createStyles } from "@mantine/core";
 
-export const HEADER_HEIGHT = 150;
+export const HEADER_HEIGHT = 100;
 
 export const headerStyles = createStyles((theme) => ({
   root: {

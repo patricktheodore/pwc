@@ -74,7 +74,7 @@ export const ServicesCont = () => {
         size={60}
         radius="xl"
         variant="gradient"
-        gradient={{ deg: 133, from: "orange", to: "yellow" }}
+        gradient={{ deg: 133, from: "#FF5714", to: "#FFB800" }}
         className={classes.themeIcon}
       >
         <service.icon size={40} strokeWidth={0.75} color={"white"} />

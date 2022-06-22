@@ -45,7 +45,7 @@ export const HeroImage = () => {
           <Anchor component={Link} to="/Contact" mt="2rem">
             <Button
               variant="gradient"
-              gradient={{ deg: 133, from: "orange", to: "yellow" }}
+              gradient={{ deg: 133, from: "#FF5714", to: "#FFB800" }}
               radius="xl"
               className={classes.controlButtons}
             >
@@ -55,7 +55,7 @@ export const HeroImage = () => {
           <Anchor href="tel:040000000" mt="2rem">
             <Button
               variant="gradient"
-              gradient={{ deg: 133, from: "orange", to: "yellow" }}
+              gradient={{ deg: 133, from: "#FF5714", to: "#FFB800" }}
               radius="xl"
               className={classes.controlButtons}
             >
