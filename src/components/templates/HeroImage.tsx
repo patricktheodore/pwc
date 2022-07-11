@@ -26,7 +26,7 @@ export const HeroImage = () => {
         style={{ position: "absolute" }}
         className={classes.background}
         alt=""
-        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        src="../../images/WIND36.jpg"
       />
       <Container className={classes.container}>
         <Title className={classes.title}>
@@ -38,8 +38,8 @@ export const HeroImage = () => {
           mt="xl"
           style={{ margin: "2rem" }}
         >
-          Reliable, Efficient, Sustainable. We take great care Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry.
+          Reliable, efficient, sustainable cleaning that keeps your assets
+          sparkling.
         </Text>
         <Container fluid className={classes.buttonGroup}>
           <Anchor component={Link} to="/Contact" mt="2rem">

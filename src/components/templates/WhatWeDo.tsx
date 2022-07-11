@@ -19,25 +19,25 @@ const features = [
     icon: Droplet,
     title: "Window Cleaning",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Our main service is commercial and residential window cleaning. We use the latest technology in water-fed systems, leaving your windows sparkling!",
   },
   {
     icon: Sun,
     title: "Solar Panel Cleaning",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Clean solar panels free from dirt and dust improves the efficiency of your solar panels with our experienced cleaners.We clean home roof-top solar panels to large industrial solar panel farms.",
   },
   {
     icon: SmartHome,
-    title: "Gutter Cleaning",
+    title: "Pressure Cleaning",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Ideal for cleaning larger surfaces to help maintain the overall appearance of a property.",
   },
   {
     icon: CircleDotted,
-    title: "Pool Fence Restoration",
+    title: "Nanocoating",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Nano coating is engineered to change the surface of glass causing it to repel water making it almost maintenance-free.",
   },
 ];
 
@@ -78,10 +78,14 @@ export const WhatWeDo = () => {
           What We Do...
         </Title>
         <Text className={classes.whatWeDoText}>
-          Services that we provide ... Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took
-          a galley of type and scrambled it to make a type specimen book.
+          Purified Window Cleaning are leaders in providing cleaning services to
+          residential and commercial customers across Perth. We pride ourselves
+          on being reliable and efficient in our work ethic and use high-quality
+          cleaning methods and modern equipment to ensure a superior result
+          while maintaining sustainability. As a company we believe in building
+          long lasting client partnerships. Our team makes it a priority to get
+          to know our customers and to offer unique and customised solutions to
+          maintain their properties all year round.
         </Text>
         <Anchor component={Link} to="/Services">
           <Button size="sm" radius="xl" className={classes.cardButton}>

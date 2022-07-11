@@ -27,13 +27,13 @@ const services = [
     icon: Home,
     title: "Residential Window Cleaning",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "When it comes to high quality residential window cleaning, our team at Purified Window Cleaning have the skills to provide the highest quality service leaving your windows sparkling.. Our goal is to make your life easier, allowing you to forget about cleaning windows. We love that our clients have high standards so we go to great lengths to exceed your expectations and will work with you to tailor personalised schedules to suit your household.",
   },
   {
     icon: BuildingStore,
     title: "Commercial Window Cleaning",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "First impressions count. Our commercial window cleaning service will maintain your businesses perfect shine and ensure your staff and customers can enjoy a crystal clear view. Purified Window Cleaning services a large number of commercial properties including restaurants, shops, offices, schools, warehouses and small buildings. Our Pure Water Fed Poles allow us a reach of 15 metres in height and while being environmentally friendly  in eliminating the need for harsh chemicals. We work with owners to tailor schedules that suit their businesses and where required can provide service outside of normal business hours, so as not to inconvenience you or your customers.",
   },
   {
     icon: BuildingSkyscraper,
@@ -45,19 +45,19 @@ const services = [
     icon: Sun,
     title: "Solar Panel Cleaning",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Clean solar panels free from dirt and dust improves their efficiency by up to 20%, saving you money.  Our experienced cleaners use pure water technology to ensure no damage occurs to your panels. Our advanced tools and equipment are non-abrasive and environmentally friendly, ensuring a stain-free finish for maximum sunlight absorption. ",
   },
   {
     icon: SmartHome,
-    title: "Gutters & High Pressure Cleaning",
+    title: "High Pressure Cleaning",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Ideal for cleaning larger surfaces to help maintain the overall appearance of a property. We can use the pressure cleaner to service concrete, pavers, driveways, house walls and roofs. ",
   },
   {
     icon: Pool,
-    title: "Pool Fence Restoration",
+    title: "Nanocoating",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Nanocoating is engineered to change the surface of glass making it almost maintenance-free. The coating’s smooth service repels water, not allowing dirt or water drops to attach into the glass pores. Allowing for less cleaning time as it keeps the glass relatively free of grime and scum build-up all while protecting your glass. Nano coating is best used on pool balustrades, show screens and windows directly impacted by the ocean or river.",
   },
 ];
 
