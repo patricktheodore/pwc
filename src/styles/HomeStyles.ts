@@ -248,7 +248,7 @@ export const homeStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan("xl")]: {
       flexDirection: "column",
-      padding: "4rem 4rem",
+      padding: "4rem 0.5rem",
     },
 
     [theme.fn.smallerThan("md")]: {
@@ -268,7 +268,7 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   whatWeDoStack: {
-    width: "30%",
+    width: "40%",
     marginRight: "2rem",
 
     [theme.fn.smallerThan("xl")]: {
@@ -281,7 +281,7 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   whatWeDoGrid: {
-    width: "66%",
+    width: "50%",
     marginLeft: "2rem",
 
     [theme.fn.smallerThan("lg")]: {
@@ -406,6 +406,65 @@ export const homeStyles = createStyles((theme) => ({
   },
 
   servicesGrid: {
+    alignItems: "flex-start",
     marginBottom: "4rem",
+  },
+
+  aboutCont: {
+    // justifySelf: "center",
+    // display: "flex",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // flexDirection: "column",
+    padding: "2rem 8rem",
+
+    [theme.fn.smallerThan("xl")]: {
+      padding: "4rem 4rem",
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      padding: "4rem 0.5rem",
+      margin: "2rem",
+    },
+  },
+
+  aboutImage: {
+    height: "15rem",
+    width: "15rem",
+    borderRadius: "50%",
+  },
+
+  aboutTitle: {
+    fontWeight: 200,
+    fontSize: "3rem",
+    textAlign: "center",
+    marginTop: "8rem",
+
+    [theme.fn.smallerThan("xl")]: {
+      fontSize: "2.5rem",
+    },
+
+    [theme.fn.smallerThan("md")]: {
+      fontSize: "2.rem",
+    },
+  },
+
+  aboutText: {
+    textAlign: "left",
+    color: theme.colors.gray[7],
+    fontSize: "1rem",
+    marginTop: 20,
+
+    [theme.fn.smallerThan("sm")]: {
+      textAlign: "center",
+      padding: 0,
+    },
+  },
+
+  aboutDescCont: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
   },
 }));

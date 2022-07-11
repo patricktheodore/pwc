@@ -36,7 +36,7 @@ export const HeroImageStyles = createStyles((theme) => ({
 
   description: {
     textAlign: "center",
-    fontSize: "1rem",
+    fontSize: "1.2rem",
     color: theme.colors.gray[2],
     fontWeight: 200,
 
